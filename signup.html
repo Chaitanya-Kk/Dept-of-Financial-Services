@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="User Login - Department of Financial Services, Ministry of Finance, Government of India">
+  <title>User Login | Department of Financial Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="signup.css">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <!-- Skip to main content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only bg-blue-700 text-white p-2 focus-ring">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="logo.jpg" alt="Government of India Logo" class="h-12">
+        <div class="ml-4">
+          <h1 class="text-xl font-bold text-blue-900">Department of Financial Services</h1>
+          <p class="text-sm text-gray-600">Ministry of Finance, Government of India</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <input type="search" placeholder="Search..." aria-label="Search" class="border rounded p-1 pl-8 focus-ring">
+          <svg class="absolute left-2 top-2 h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <!-- BB-8 Toggle -->
+        <label class="bb8-toggle">
+          <input class="bb8-toggle__checkbox" type="checkbox" id="theme-toggle">
+          <div class="bb8-toggle__container">
+            <div class="bb8-toggle__scenery">
+              <div class="bb8-toggle__star"></div>
+              <div class="bb8-toggle__star"></div>
+              <div class="bb8-toggle__star"></div>
+              <div class="bb8-toggle__star"></div>
+              <div class="bb8-toggle__star"></div>
+              <div class="bb8-toggle__star"></div>
+              <div class="bb8-toggle__star"></div>
+              <div class="tatto-1"></div>
+              <div class="tatto-2"></div>
+              <div class="gomrassen"></div>
+              <div class="hermes"></div>
+              <div class="chenini"></div>
+              <div class="bb8-toggle__cloud"></div>
+              <div class="bb8-toggle__cloud"></div>
+              <div class="bb8-toggle__cloud"></div>
+            </div>
+            <div class="bb8">
+              <div class="bb8__head-container">
+                <div class="bb8__antenna"></div>
+                <div class="bb8__antenna"></div>
+                <div class="bb8__head"></div>
+              </div>
+              <div class="bb8__body"></div>
+            </div>
+            <div class="artificial__hidden">
+              <div class="bb8__shadow"></div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <nav class="bg-blue-900 text-white">
+      <div class="container mx-auto px-4">
+        <ul class="flex space-x-4 py-3">
+          <li><a href="index.html" class="hover:text-yellow-300 focus-ring">Who We Are</a></li>
+          <li><a href="banking.html" class="hover:text-yellow-300 focus-ring">Banking</a></li>
+          <li><a href="Insurance.html" class="hover:text-yellow-300 focus-ring">Insurance</a></li>
+          <li><a href="Financial Inclusion.html" class="hover:text-yellow-300 focus-ring">Financial Inclusion</a></li>
+          <li><a href="Cyber Security & Fintech.html" class="hover:text-yellow-300 focus-ring">Cyber Security & Fintech</a></li>
+          <li><a href="rti.html" class="hover:text-yellow-300 focus-ring">RTI</a></li>
+          <li><a href="Login.html" class="text-yellow-300 focus-ring">Consumer Signup / Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="container mx-auto px-4 py-8">
+    <!-- Consumer Portal Section -->
+    <section class="bg-blue-900 text-white rounded-lg p-8 mb-8 flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8">
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold mb-4">Consumer Portal</h2>
+        <p class="text-lg mb-4">Access your account by logging in or create a new account to explore our services.</p>
+      </div>
+      <div class="w-full md:w-1/2">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+          <div class="flex border-b border-gray-200 dark:border-gray-600 mb-4">
+            <button id="login-tab" class="tab active focus-ring" aria-selected="true" role="tab">Login</button>
+            <button id="signup-tab" class="tab focus-ring" aria-selected="false" role="tab">Signup</button>
+          </div>
+          <div id="form-content" role="tabpanel" aria-labelledby="login-tab">
+            <div class="space-y-4">
+              <div class="relative">
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email Address</label>
+                <input type="email" id="email" class="form-input mt-1 focus-ring" placeholder="Enter your email" required aria-describedby="email-error">
+                <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email address.</p>
+              </div>
+              <div class="relative">
+                <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+                <input type="password" id="password" class="form-input mt-1 focus-ring pr-10" placeholder="Enter your password" required aria-describedby="password-error">
+                <svg id="password-toggle" class="password-toggle h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <p id="password-error" class="text-red-500 text-sm mt-1 hidden">Password must be at least 8 characters.</p>
+              </div>
+              <div id="signup-fields" class="space-y-4 hidden">
+                <div class="relative">
+                  <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Full Name</label>
+                  <input type="text" id="name" class="form-input mt-1 focus-ring" placeholder="Enter your full name" aria-describedby="name-error">
+                  <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Name is required.</p>
+                </div>
+                <div class="relative">
+                  <label for="confirm-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Confirm Password</label>
+                  <input type="password" id="confirm-password" class="form-input mt-1 focus-ring pr-10" placeholder="Confirm your password" aria-describedby="confirm-password-error">
+                  <svg id="confirm-password-toggle" class="password-toggle h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <p id="confirm-password-error" class="text-red-500 text-sm mt-1 hidden">Passwords do not match.</p>
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <button id="reset-btn" class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 focus-ring">Reset</button>
+                <button id="submit-btn" class="bg-yellow-400 text-gray-800 px-4 py-2 rounded hover:bg-yellow-500 focus-ring">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <h3 class="text-lg font-semibold">Contact Us</h3>
+          <p>Department of Financial Services, Ministry of Finance, Government of India</p>
+          <a href="#" class="text-yellow-300 hover:underline focus-ring">Contact Details</a>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Quick Links</h3>
+          <ul class="list-disc pl-5">
+            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Feedback</a></li>
+            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Terms of Use</a></li>
+            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Website Policies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Stats</h3>
+          <p>Total Visitors: 1,636,158</p>
+          <p>Last Updated: May 13, 2025</p>
+        </div>
+      </div>
+      <p class="text-center mt-8">Website Content Managed and Owned by Department of Financial Services</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Theme Toggle and Form Handling -->
+  <script src="signup.js">
+ 
+  </script>
+</body>
+</html>
