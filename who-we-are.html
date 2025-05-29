@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Department of Financial Services - Vision, Mission, Organizational Structure, and Leadership">
+    <title>Who We Are - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .timeline-connector {
+            position: absolute;
+            width: 2px;
+            background: #3b82f6;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+        .org-chart-box {
+            transition: all 0.3s ease;
+        }
+        .org-chart-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .vision-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .mission-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Include header from index.html -->
+    <div id="header-placeholder"></div>
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li class="text-gray-500">/</li>
+                <li class="text-gray-600">Who We Are</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold mb-4">Who We Are</h1>
+            <p class="text-xl">Department of Financial Services - Driving Financial Inclusion and Economic Growth</p>
+        </section>
+
+        <!-- About Section -->
+        <section class="bg-white rounded-lg shadow p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6">About the Department</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        The Department of Financial Services (DFS) is responsible for policy formulation and 
+                        implementation in the financial sector, particularly focusing on banking, insurance, 
+                        and pension reforms in India. Established as a separate department in 2008, DFS plays 
+                        a crucial role in ensuring financial stability and promoting inclusive growth.
+                    </p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        We oversee the functioning of banks, financial institutions, and insurance companies, 
+                        ensuring they align with national priorities of financial inclusion, digital empowerment, 
+                        and sustainable economic development.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our initiatives have transformed India's financial landscape, bringing millions into 
+                        the formal financial system through innovative schemes like Jan Dhan Yojana, social 
+                        security schemes, and digital payment infrastructure.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://media.istockphoto.com/id/160735951/photo/indian-parliment-in-new-delhi-by-night.jpg?s=612x612&w=0&k=20&c=YvQw_y6W8VhBLUnnEwS364siOHSNRmxHqTW15oDegGo=" alt="DFS Building" class="rounded-lg shadow-lg w-full">
+                    <p class="text-sm text-gray-600 mt-2 text-center">Department of Financial Services, New Delhi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="vision-card text-white rounded-lg p-8">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-eye text-4xl mr-4"></i>
+                    <h2 class="text-2xl font-bold">Our Vision</h2>
+                </div>
+                <p class="text-lg leading-relaxed">
+                    To build a financially inclusive society where every citizen has access to formal 
+                    financial services, enabling them to participate in and benefit from India's economic growth, 
+                    while ensuring the stability and efficiency of the financial system.
+                </p>
+            </div>
+            <div class="mission-card text-white rounded-lg p-8">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bullseye text-4xl mr-4"></i>
+                    <h2 class="text-2xl font-bold">Our Mission</h2>
+                </div>
+                <ul class="text-lg space-y-2">
+                    <li><i class="fas fa-check mr-2"></i>Ensure universal access to financial services</li>
+                    <li><i class="fas fa-check mr-2"></i>Strengthen the banking and insurance sectors</li>
+                    <li><i class="fas fa-check mr-2"></i>Promote digital financial inclusion</li>
+                    <li><i class="fas fa-check mr-2"></i>Enhance financial literacy and consumer protection</li>
+                    <li><i class="fas fa-check mr-2"></i>Foster innovation in financial technology</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="bg-gray-50 rounded-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hand-holding-heart text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Integrity</h3>
+                    <p class="text-gray-600 text-sm">Maintaining highest standards of ethics and transparency in all operations</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Inclusivity</h3>
+                    <p class="text-gray-600 text-sm">Ensuring financial services reach every citizen regardless of economic status</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Innovation</h3>
+                    <p class="text-gray-600 text-sm">Embracing technology and new ideas to transform financial services</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Security</h3>
+                    <p class="text-gray-600 text-sm">Protecting citizen's financial interests and ensuring system stability</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Functions & Responsibilities -->
+        <section class="bg-white rounded-lg shadow p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6">Functions & Responsibilities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">
+                        <i class="fas fa-university mr-2"></i>Banking Sector
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-chevron-right text-blue-500 mr-2"></i>Policy formulation for Public Sector Banks</li>
+                        <li><i class="fas fa-chevron-right text-blue-500 mr-2"></i>Capital infusion and performance monitoring</li>
+                        <li><i class="fas fa-chevron-right text-blue-500 mr-2"></i>Banking reforms and governance</li>
+                        <li><i class="fas fa-chevron-right text-blue-500 mr-2"></i>Regional Rural Banks oversight</li>
+                        <li><i class="fas fa-chevron-right text-blue-500 mr-2"></i>Coordination with RBI on policy matters</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-green-600">
+                        <i class="fas fa-shield-alt mr-2"></i>Insurance & Pension
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-chevron-right text-green-500 mr-2"></i>Insurance sector policy and legislation</li>
+                        <li><i class="fas fa-chevron-right text-green-500 mr-2"></i>Monitoring public sector insurance companies</li>
+                        <li><i class="fas fa-chevron-right text-green-500 mr-2"></i>Pension reforms and NPS implementation</li>
+                        <li><i class="fas fa-chevron-right text-green-500 mr-2"></i>Social security schemes administration</li>
+                        <li><i class="fas fa-chevron-right text-green-500 mr-2"></i>Coordination with IRDAI and PFRDA</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">
+                        <i class="fas fa-hand-holding-usd mr-2"></i>Financial Inclusion
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-chevron-right text-purple-500 mr-2"></i>Pradhan Mantri Jan Dhan Yojana</li>
+                        <li><i class="fas fa-chevron-right text-purple-500 mr-2"></i>Direct Benefit Transfer implementation</li>
+                        <li><i class="fas fa-chevron-right text-purple-500 mr-2"></i>Financial literacy programs</li>
+                        <li><i class="fas fa-chevron-right text-purple-500 mr-2"></i>Digital payment ecosystem development</li>
+                        <li><i class="fas fa-chevron-right text-purple-500 mr-2"></i>Banking correspondent network</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-orange-600">
+                        <i class="fas fa-laptop-code mr-2"></i>Digital Initiatives
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-chevron-right text-orange-500 mr-2"></i>Digital Banking Units establishment</li>
+                        <li><i class="fas fa-chevron-right text-orange-500 mr-2"></i>Cyber security framework</li>
+                        <li><i class="fas fa-chevron-right text-orange-500 mr-2"></i>Fintech ecosystem development</li>
+                        <li><i class="fas fa-chevron-right text-orange-500 mr-2"></i>Account Aggregator framework</li>
+                        <li><i class="fas fa-chevron-right text-orange-500 mr-2"></i>Innovation and technology adoption</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizational Structure -->
+        <section class="bg-white rounded-lg shadow p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-8 text-center">Organizational Structure</h2>
+            
+            <!-- Top Leadership -->
+            <div class="max-w-4xl mx-auto">
+                <div class="flex justify-center mb-8">
+                    <div class="org-chart-box bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-6 text-center">
+                        <i class="fas fa-user-tie text-4xl mb-2"></i>
+                        <h3 class="font-bold text-lg">Hon'ble Finance Minister</h3>
+                        <p>Smt. Nirmala Sitharaman</p>
+                    </div>
+                </div>
+
+                <!-- Ministers of State -->
+                <div class="flex justify-center space-x-8 mb-8">
+                    <div class="org-chart-box bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg p-4 text-center">
+                        <i class="fas fa-user-tie text-3xl mb-2"></i>
+                        <h4 class="font-semibold">Minister of State (Finance)</h4>
+                        <p class="text-sm">Shri Pankaj Chaudhary</p>
+                    </div>
+                    <div class="org-chart-box bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg p-4 text-center">
+                        <i class="fas fa-user-tie text-3xl mb-2"></i>
+                        <h4 class="font-semibold">Minister of State (Finance)</h4>
+                        <p class="text-sm">Dr. Bhagwat Karad</p>
+                    </div>
+                </div>
+
+                <!-- Secretary -->
+                <div class="flex justify-center mb-8">
+                    <div class="org-chart-box bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg p-4 text-center">
+                        <i class="fas fa-user text-3xl mb-2"></i>
+                        <h4 class="font-semibold">Secretary (FS)</h4>
+                        <p class="text-sm">Shri Vivek Joshi, IAS</p>
+                    </div>
+                </div>
+
+                <!-- Additional Secretaries and Joint Secretaries -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="org-chart-box bg-gray-100 rounded-lg p-4 text-center">
+                        <i class="fas fa-user text-2xl mb-2 text-blue-600"></i>
+                        <h5 class="font-semibold text-sm">Additional Secretary</h5>
+                        <p class="text-xs">Banking</p>
+                    </div>
+                    <div class="org-chart-box bg-gray-100 rounded-lg p-4 text-center">
+                        <i class="fas fa-user text-2xl mb-2 text-green-600"></i>
+                        <h5 class="font-semibold text-sm">Joint Secretary</h5>
+                        <p class="text-xs">Insurance</p>
+                    </div>
+                    <div class="org-chart-box bg-gray-100 rounded-lg p-4 text-center">
+                        <i class="fas fa-user text-2xl mb-2 text-purple-600"></i>
+                        <h5 class="font-semibold text-sm">Joint Secretary</h5>
+                        <p class="text-xs">Financial Inclusion</p>
+                    </div>
+                    <div class="org-chart-box bg-gray-100 rounded-lg p-4 text-center">
+                        <i class="fas fa-user text-2xl mb-2 text-orange-600"></i>
+                        <h5 class="font-semibold text-sm">Joint Secretary</h5>
+                        <p class="text-xs">Digital Banking</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="organizational-structure.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 inline-block">
+                    View Detailed Organization Chart <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Milestones Timeline -->
+        <section class="bg-gray-50 rounded-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our Journey & Milestones</h2>
+            <div class="relative">
+                <div class="timeline-connector"></div>
+                <div class="space-y-8">
+                    <div class="flex items-center">
+                        <div class="w-1/2 text-right pr-8">
+                            <h3 class="font-semibold text-lg">Department Established</h3>
+                            <p class="text-gray-600">Carved out from Department of Economic Affairs</p>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold z-10">
+                            2008
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-1/2 text-right pr-8"></div>
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold z-10">
+                            2014
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <h3 class="font-semibold text-lg">Pradhan Mantri Jan Dhan Yojana</h3>
+                            <p class="text-gray-600">Launched world's largest financial inclusion program</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-1/2 text-right pr-8">
+                            <h3 class="font-semibold text-lg">Jan Suraksha Schemes</h3>
+                            <p class="text-gray-600">PMJJBY, PMSBY & APY launched</p>
+                        </div>
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold z-10">
+                            2015
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-1/2 text-right pr-8"></div>
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold z-10">
+                            2020
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <h3 class="font-semibold text-lg">PSB Consolidation</h3>
+                            <p class="text-gray-600">Merged 10 PSBs into 4 larger banks</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-1/2 text-right pr-8">
+                            <h3 class="font-semibold text-lg">Digital Banking Units</h3>
+                            <p class="text-gray-600">75 DBUs inaugurated across districts</p>
+                        </div>
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold z-10">
+                            2022
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divisions -->
+        <section class="bg-white rounded-lg shadow p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6">Our Divisions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lgtransition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-university text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Banking Division - I</h3>
+                    </div>
+                    <p class="text-gray-600 mb-3">Handles policy matters related to Public Sector Banks</p>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Capital infusion & restructuring</li>
+                        <li>• Performance monitoring</li>
+                        <li>• Board appointments</li>
+                        <li>• Vigilance matters</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-landmark text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Banking Division - II</h3>
+                    </div>
+                    <p class="text-gray-600 mb-3">Manages Regional Rural Banks and Cooperative Banks</p>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• RRB amalgamation & monitoring</li>
+                        <li>• Cooperative banking reforms</li>
+                        <li>• NABARD coordination</li>
+                        <li>• Rural credit policies</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-shield-alt text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Insurance Division</h3>
+                    </div>
+                    <p class="text-gray-600 mb-3">Oversees insurance sector policies and companies</p>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Life & General insurance policies</li>
+                        <li>• Public sector insurers monitoring</li>
+                        <li>• Insurance penetration initiatives</li>
+                        <li>• IRDAI coordination</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-hand-holding-usd text-2xl text-orange-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Financial Inclusion</h3>
+                    </div>
+                    <p class="text-gray-600 mb-3">Drives financial inclusion and literacy programs</p>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Jan Dhan Yojana implementation</li>
+                        <li>• Direct Benefit Transfer</li>
+                        <li>• Financial literacy programs</li>
+                        <li>• BC/BF network expansion</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-user-clock text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Pension Reforms</h3>
+                    </div>
+                    <p class="text-gray-600 mb-3">Manages pension schemes and reforms</p>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• National Pension System</li>
+                        <li>• Atal Pension Yojana</li>
+                        <li>• PFRDA coordination</li>
+                        <li>• Pension policy formulation</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-laptop-code text-2xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">IT & Fintech</h3>
+                    </div>
+                    <p class="text-gray-600 mb-3">Promotes digital banking and fintech ecosystem</p>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• Digital Banking Units</li>
+                        <li>• Cyber security framework</li>
+                        <li>• Fintech innovations</li>
+                        <li>• Technology adoption</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Officials -->
+        <section class="bg-white rounded-lg shadow p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6">Leadership Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Finance Minister -->
+                <div class="text-center">
+                    <img src="https://s7d1.scene7.com/is/image/wbcollab/nirmala-sitharam?qlt=90&fmt=webp&resMode=sharp2" alt="Finance Minister" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-200">
+                    <h3 class="font-semibold text-lg">Smt. Nirmala Sitharaman</h3>
+                    <p class="text-gray-600">Hon'ble Finance Minister</p>
+                    <div class="mt-3 space-x-2">
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- MoS 1 -->
+                <div class="text-center">
+                    <img src="https://doe.gov.in/files/whos_who_images/minister-of-finance.JPG" alt="Minister of State" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-green-200">
+                    <h3 class="font-semibold text-lg">Shri Pankaj Chaudhary</h3>
+                    <p class="text-gray-600">Hon'ble Minister of State for Finance</p>
+                    <div class="mt-3 space-x-2">
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- MoS 2 -->
+                <div class="text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/KaradSir1956Swajas.jpg" alt="Minister of State" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-green-200">
+                    <h3 class="font-semibold text-lg">Dr. Bhagwat Karad</h3>
+                    <p class="text-gray-600">Hon'ble Minister of State for Finance</p>
+                    <div class="mt-3 space-x-2">
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- Secretary -->
+                <div class="text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Vivek_Joshi_IAS_CEC.jpg" alt="Secretary" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-200">
+                    <h3 class="font-semibold text-lg">Shri Vivek Joshi, IAS</h3>
+                    <p class="text-gray-600">Secretary (Financial Services)</p>
+                    <div class="mt-3 space-x-2">
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-phone"></i></a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- Additional Secretary -->
+                <div class="text-center">
+                    <img src="https://biographykind.com/wp-content/uploads/2024/10/IAS-Manoj-Kumar-Sharma.jpg" alt="Additional Secretary" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-orange-200">
+                    <h3 class="font-semibold text-lg">Mr. Manoj Kumar, IAS</h3>
+                    <p class="text-gray-600">Additional Secretary</p>
+                    <div class="mt-3 space-x-2">
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-phone"></i></a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- Economic Adviser -->
+                <div class="text-center">
+                    <img src="https://www.mea.gov.in/images/under_profile.jpg" alt="Economic Adviser" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200">
+                    <h3 class="font-semibold text-lg">Dr. S. Jaishankar</h3>
+                    <p class="text-gray-600">Economic Adviser</p>
+                    <div class="mt-3 space-x-2">
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-phone"></i></a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="leadership.html" class="text-blue-600 hover:underline">
+                    View Complete Leadership Directory <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Partner Organizations -->
+        <section class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Partner Organizations</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"><div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Seal_of_the_Reserve_Bank_of_India.svg" alt="RBI" class="h-16 object-contain" title="Reserve Bank of India">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="https://www.financialexpress.com/wp-content/uploads/2022/12/Irdai-holds-meet-to-ascertain-Covid-preparedness.jpg?w=440" alt="IRDAI" class="h-16 object-contain" title="Insurance Regulatory and Development Authority of India">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Pension_Fund_Regulatory_and_Development_Authority_Logo.svg/1200px-Pension_Fund_Regulatory_and_Development_Authority_Logo.svg.png" alt="PFRDA" class="h-16 object-contain" title="Pension Fund Regulatory and Development Authority">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/NABARD_logo.png/250px-NABARD_logo.png" alt="NABARD" class="h-16 object-contain" title="National Bank for Agriculture and Rural Development">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="https://gatewaysamath.com/storage/2023/10/What-is-NPCI.jpg" alt="NPCI" class="h-16 object-contain" title="National Payments Corporation of India">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpTqKpaeWeGzKxrzBbpNfx461ToJYDmiDryQ&s" alt="NIC" class="h-16 object-contain" title="National Informatics Centre">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="index.js"></script>
+    <script>
+        // Page-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate value cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

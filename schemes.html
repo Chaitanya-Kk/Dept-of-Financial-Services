@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Schemes - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Include header from index.html -->
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li>/</li>
+                <li class="text-gray-600">Schemes</li>
+            </ol>
+        </nav>
+
+        <h1 class="text-3xl font-bold mb-6">Government Financial Schemes</h1>
+
+        <!-- Scheme Filter -->
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Find Schemes for You</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Category</label>
+                    <select class="w-full px-3 py-2 border rounded-lg" onchange="filterSchemes()">
+                        <option value="">All Categories</option>
+                        <option value="savings">Savings</option>
+                        <option value="insurance">Insurance</option>
+                        <option value="pension">Pension</option>
+                        <option value="credit">Credit</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Age Group</label>
+                    <select class="w-full px-3 py-2 border rounded-lg" onchange="filterSchemes()">
+                        <option value="">All Ages</option>
+                        <option value="18-40">18-40 years</option>
+                        <option value="40-60">40-60 years</option>
+                        <option value="60+">60+ years</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Gender</label>
+                    <select class="w-full px-3 py-2 border rounded-lg" onchange="filterSchemes()">
+                        <option value="">All</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="transgender">Transgender</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Income Level</label>
+                    <select class="w-full px-3 py-2 border rounded-lg" onchange="filterSchemes()">
+                        <option value="">All Income Levels</option>
+                        <option value="bpl">Below Poverty Line</option>
+                        <option value="low">Low Income</option>
+                        <option value="middle">Middle Income</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schemes Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="schemesGrid">
+            <!-- PMJDY Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow scheme-card" data-category="savings">
+                <div class="bg-gradient-to-r from-orange-500 to-orange-600 p-4">
+                    <i class="fas fa-piggy-bank text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Pradhan Mantri Jan Dhan Yojana</h3>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Savings</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Zero Balance</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Financial inclusion program providing universal access to banking facilities.</p>
+                    <div class="space-y-2 text-sm mb-4">
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>RuPay Debit Card</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>₹2 lakh accident insurance</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>₹10,000 overdraft</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="schemes/jan-dhan.html" class="text-blue-600 hover:underline">View Details</a>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PMJJBY Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow scheme-card" data-category="insurance">
+                <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-4">
+                    <i class="fas fa-shield-alt text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">PM Jeevan Jyoti Bima Yojana</h3>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Life Insurance</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">₹436/year</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Life insurance scheme offering coverage of ₹2 lakh for death due to any reason.</p>
+                    <div class="space-y-2 text-sm mb-4">
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Age: 18-50 years</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>₹2 lakh coverage</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Auto-debit facility</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="schemes/jeevan-jyoti.html" class="text-blue-600 hover:underline">View Details</a>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PMSBY Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow scheme-card" data-category="insurance">
+                <div class="bg-gradient-to-r from-green-500 to-green-600 p-4">
+                    <i class="fas fa-user-shield text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">PM Suraksha Bima Yojana</h3>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Accident Insurance</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">₹20/year</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Accident insurance scheme offering coverage for death and disability.</p>
+                    <div class="space-y-2 text-sm mb-4">
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Age: 18-70 years</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>₹2 lakh for death/disability</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>₹1 lakh for partial disability</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="schemes/suraksha-bima.html" class="text-blue-600 hover:underline">View Details</a>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- APY Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow scheme-card" data-category="pension">
+                <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-4">
+                    <i class="fas fa-user-clock text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Atal Pension Yojana</h3>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Pension</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Guaranteed Returns</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Pension scheme for unorganized sector workers providing guaranteed pension.</p>
+                    <div class="space-y-2 text-sm mb-4">
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Age: 18-40 years</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>₹1000-5000 monthly pension</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Government co-contribution</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="schemes/atal-pension.html" class="text-blue-600 hover:underline">View Details</a>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MUDRA Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow scheme-card" data-category="credit">
+                <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 p-4">
+                    <i class="fas fa-hand-holding-usd text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">PM MUDRA Yojana</h3>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Business Loan</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Collateral Free</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Providing loans up to ₹10 lakh to non-corporate small business sector.</p>
+                    <div class="space-y-2 text-sm mb-4">
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Shishu: up to ₹50,000</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Kishore: ₹50,001 to ₹5 lakh</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Tarun: ₹5 lakh to ₹10 lakh</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="schemes/mudra.html" class="text-blue-600 hover:underline">View Details</a>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stand Up India Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow scheme-card" data-category="credit">
+                <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 p-4">
+                    <i class="fas fa-rocket text-white text-4xl"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Stand Up India</h3>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">Entrepreneurship</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">SC/ST/Women</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Bank loans between ₹10 lakh to ₹1 crore for SC/ST and women entrepreneurs.</p>
+                    <div class="space-y-2 text-sm mb-4">
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>For greenfield enterprises</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>Manufacturing/Service sector</p>
+                        <p><i class="fas fa-check-circle text-green-500 mr-2"></i>7 years repayment</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="schemes/standup-india.html" class="text-blue-600 hover:underline">View Details</a>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scheme Comparison Tool -->
+        <section class="mt-12 bg-white rounded-lg shadow p-8">
+            <h2 class="text-2xl font-bold mb-6">Compare Schemes</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border p-3 text-left">Scheme</th>
+                            <th class="border p-3 text-left">Type</th>
+                            <th class="border p-3 text-left">Eligibility</th>
+                            <th class="border p-3 text-left">Benefits</th>
+                            <th class="border p-3 text-left">Premium/Fee</th>
+                            <th class="border p-3 text-left">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border p-3">PMJDY</td>
+                            <td class="border p-3">Savings Account</td>
+                            <td class="border p-3">All citizens</td>
+                            <td class="border p-3">Zero balance, RuPay card</td>
+                            <td class="border p-3">Free</td>
+                            <td class="border p-3"><button class="text-blue-600 hover:underline">Apply</button></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border p-3">PMJJBY</td>
+                            <td class="border p-3">Life Insurance</td>
+                            <td class="border p-3">18-50 years</td>
+                            <td class="border p-3">₹2 lakh coverage</td>
+                            <td class="border p-3">₹436/year</td>
+                            <td class="border p-3"><button class="text-blue-600 hover:underline">Apply</button></td>
+                        </tr>
+                        <tr>
+                            <td class="border p-3">PMSBY</td>
+                            <td class="border p-3">Accident Insurance</td>
+                            <td class="border p-3">18-70 years</td>
+                            <td class="border p-3">₹2 lakh coverage</td>
+                            <td class="border p-3">₹20/year</td>
+                            <td class="border p-3"><button class="text-blue-600 hover:underline">Apply</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <script src="index.js"></script>
+    <script>
+        function filterSchemes() {
+            // Implement filtering logic
+            console.log('Filtering schemes...');
+        }
+    </script>
+</body>
+</html>
+

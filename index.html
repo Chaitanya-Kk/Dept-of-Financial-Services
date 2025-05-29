@@ -6,14 +6,32 @@
   <meta name="description" content="Department of Financial Services, Ministry of Finance, Government of India - Promoting financial inclusion and economic progress.">
   <title>Department of Financial Services | Ministry of Finance</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="index.css">
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
   <!-- Skip to main content -->
   <a href="#main-content" class="sr-only focus:not-sr-only bg-blue-700 text-white p-2 focus-ring">Skip to main content</a>
 
+  <!-- Top Bar -->
+  <div class="bg-gray-800 text-white py-2">
+    <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+      <div class="flex items-center space-x-4">
+        <span><i class="far fa-calendar"></i> <span id="currentDate"></span></span>
+        <span><i class="far fa-clock"></i> <span id="currentTime"></span></span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button onclick="changeFontSize('decrease')" aria-label="Decrease font size" class="px-2">A-</button>
+        <button onclick="changeFontSize('normal')" aria-label="Normal font size" class="px-2">A</button>
+        <button onclick="changeFontSize('increase')" aria-label="Increase font size" class="px-2">A+</button>
+        <span class="mx-2">|</span>
+        <a href="#" class="hover:text-yellow-300">हिंदी</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
-  <header class="bg-white shadow sticky">
+  <header class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center">
         <img src="logo.jpg" alt="Government of India Logo" class="h-12">
@@ -23,9 +41,8 @@
         </div>
       </div>
       <div class="flex items-center space-x-4">
-        
         <div class="relative">
-          <input type="search" placeholder="Search..." aria-label="Search" class="border rounded p-1 pl-8 focus-ring">
+          <input type="search" id="searchInput" placeholder="Search..." aria-label="Search" class="border rounded p-1 pl-8 focus-ring">
           <svg class="absolute left-2 top-2 h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
@@ -68,14 +85,33 @@
     </div>
     <nav class="bg-blue-900 text-white">
       <div class="container mx-auto px-4">
-        <ul class="flex space-x-4 py-3">
-          <li><a href="index.html" class="text-yellow-300 focus-ring">Who We Are</a></li>
-          <li><a href="banking.html" class="hover:text-yellow-300 focus-ring">Banking</a></li>
-          <li><a href="Insurance.html" class="hover:text-yellow-300 focus-ring">Insurance</a></li>
-          <li><a href="Financial Inclusion.html" class="hover:text-yellow-300 focus-ring">Financial Inclusion</a></li>
-          <li><a href="Cyber Security & Fintech.html" class="hover:text-yellow-300 focus-ring">Cyber Security & Fintech</a></li>
-          <li><a href="RTI.html" class="hover:text-yellow-300 focus-ring">RTI</a></li>
-          <li><a href="signup.html" class="hover:text-yellow-300 focus-ring">Consumer SIgnup / Login</a></li>
+        <ul class="flex space-x-4 py-3 overflow-x-auto">
+          <li><a href="index.html" class="text-yellow-300 focus-ring whitespace-nowrap">Home</a></li>
+          <li class="relative group">
+            <a href="who-we-are.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Who We Are</a>
+            <ul class="absolute hidden group-hover:block bg-blue-800 mt-2 rounded shadow-lg">
+              <li><a href="about.html" class="block px-4 py-2 hover:bg-blue-700">About Us</a></li>
+              <li><a href="organizational-structure.html" class="block px-4 py-2 hover:bg-blue-700">Organizational Structure</a></li>
+              <li><a href="vision-mission.html" class="block px-4 py-2 hover:bg-blue-700">Vision & Mission</a></li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a href="banking.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Banking</a>
+            <ul class="absolute hidden group-hover:block bg-blue-800 mt-2 rounded shadow-lg">
+              <li><a href="public-sector-banks.html" class="block px-4 py-2 hover:bg-blue-700">Public Sector Banks</a></li>
+              <li><a href="private-banks.html" class="block px-4 py-2 hover:bg-blue-700">Private Banks</a></li>
+              <li><a href="regional-rural-banks.html" class="block px-4 py-2 hover:bg-blue-700">Regional Rural Banks</a></li>
+              <li><a href="cooperative-banks.html" class="block px-4 py-2 hover:bg-blue-700">Cooperative Banks</a></li>
+            </ul>
+          </li>
+          <li><a href="insurance.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Insurance</a></li>
+          <li><a href="financial-inclusion.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Financial Inclusion</a></li>
+          <li><a href="cyber-security.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Cyber Security & Fintech</a></li>
+          <li><a href="schemes.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Schemes</a></li>
+          <li><a href="rti.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">RTI</a></li>
+          <li><a href="resources.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Resources</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Contact</a></li>
+          <li><a href="signup.html" class="hover:text-yellow-300 focus-ring whitespace-nowrap">Login</a></li>
         </ul>
       </div>
     </nav>
@@ -83,11 +119,70 @@
 
   <!-- Main Content -->
   <main id="main-content" class="container mx-auto px-4 py-8">
-    <!-- Hero Section -->
-    <section class="bg-blue-900 text-white rounded-lg p-8 mb-8">
-      <h2 class="text-3xl font-bold mb-4">Carving an Inclusive Strategy for a Progressive Indian Economy</h2>
-      <p class="text-lg mb-4">Explore our flagship schemes and initiatives driving financial inclusion.</p>
-      <a href="#" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 focus-ring">Discover More</a>
+    <!-- Announcement Bar -->
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6 rounded">
+      <div class="flex items-center">
+        <i class="fas fa-bullhorn text-yellow-600 mr-3"></i>
+        <marquee behavior="scroll" direction="left" class="font-semibold">
+          Latest: PM Jan Dhan Yojana crosses 55 crore accounts | New guidelines for Digital Banking Units released | Financial Inclusion Index reaches 60.1
+        </marquee>
+      </div>
+    </div>
+
+    <!-- Hero Section with Slider -->
+    <section class="mb-8">
+      <div class="relative overflow-hidden rounded-lg shadow-lg">
+        <div class="slider-container" id="heroSlider">
+          <div class="slide active">
+            <img src="https://www.hindustantimes.com/ht-img/img/2023/08/27/1600x900/pm_modi_palam_speech_delhi_airport_1693110136350_1693110136701.jpg" alt="Financial Inclusion" class="w-full h-96 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
+              <h2 class="text-3xl font-bold text-white mb-2">Carving an Inclusive Strategy for a Progressive Indian Economy</h2>
+              <p class="text-white mb-4">Explore our flagship schemes and initiatives driving financial inclusion.</p>
+              <a href="#" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 focus-ring inline-block">Discover More</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://www.rightsofemployees.com/wp-content/uploads/2022/08/itr-new-rule.png" alt="Digital Banking" class="w-full h-96 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
+              <h2 class="text-3xl font-bold text-white mb-2">Digital Banking Units - Banking at Your Doorstep</h2>
+              <p class="text-white mb-4">75 Digital Banking Units inaugurated across 75 districts.</p>
+              <a href="#" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 focus-ring inline-block">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full" onclick="changeSlide(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full" onclick="changeSlide(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="mb-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <i class="fas fa-users text-3xl text-blue-600 mb-2"></i>
+          <h3 class="text-2xl font-bold text-blue-900">55.18 Cr</h3>
+          <p class="text-gray-600">Jan Dhan Accounts</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <i class="fas fa-shield-alt text-3xl text-green-600 mb-2"></i>
+          <h3 class="text-2xl font-bold text-blue-900">50.78 Cr</h3>
+          <p class="text-gray-600">PM Suraksha Enrollments</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <i class="fas fa-hand-holding-usd text-3xl text-yellow-600 mb-2"></i>
+          <h3 class="text-2xl font-bold text-blue-900">52.07 Cr</h3>
+          <p class="text-gray-600">Mudra Loans</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <i class="fas fa-university text-3xl text-purple-600 mb-2"></i>
+          <h3 class="text-2xl font-bold text-blue-900">1.59 Lakh</h3>
+          <p class="text-gray-600">Bank Branches</p>
+        </div>
+      </div>
     </section>
 
     <!-- Flagship Schemes 3D Carousel -->
@@ -99,42 +194,42 @@
             <div class="card-content" role="article" aria-label="Pradhan Mantri Jan Dhan Yojana">
               <h3>Jan Dhan Yojana</h3>
               <p>Accounts: 55.18 Crore<br>(March 2025)</p>
-              <a href="#" class="focus-ring">Know More</a>
+              <a href="schemes/jan-dhan.html" class="focus-ring">Know More</a>
             </div>
           </div>
           <div class="card" style="--index: 1; --color-card: 19, 136, 8;" tabindex="0">
             <div class="card-content" role="article" aria-label="Atal Pension Yojana">
               <h3>Atal Pension Yojana</h3>
               <p>Subscribers: 7.60 Crore<br>(March 2025)</p>
-              <a href="#" class="focus-ring">Know More</a>
+              <a href="schemes/atal-pension.html" class="focus-ring">Know More</a>
             </div>
           </div>
           <div class="card" style="--index: 2; --color-card: 0, 0, 128;" tabindex="0">
             <div class="card-content" role="article" aria-label="Pradhan Mantri Jeevan Jyoti Bima Yojana">
               <h3>PM Jeevan Jyoti</h3>
               <p>Enrollments: 23.47 Crore<br>(March 2025)</p>
-              <a href="#" class="focus-ring">Know More</a>
+              <a href="schemes/jeevan-jyoti.html" class="focus-ring">Know More</a>
             </div>
           </div>
           <div class="card" style="--index: 3; --color-card: 255, 255, 255;" tabindex="0">
             <div class="card-content" role="article" aria-label="Pradhan Mantri Suraksha Bima Yojana">
               <h3>PM Suraksha Bima</h3>
               <p>Enrollments: 50.78 Crore<br>(March 2025)</p>
-              <a href="#" class="focus-ring">Know More</a>
+              <a href="schemes/suraksha-bima.html" class="focus-ring">Know More</a>
             </div>
           </div>
           <div class="card" style="--index: 4; --color-card: 255, 153, 51;" tabindex="0">
             <div class="card-content" role="article" aria-label="Pradhan Mantri Mudra Yojana">
               <h3>PM Mudra Yojana</h3>
               <p>Accounts: 52.07 Crore<br>(Feb 2025)</p>
-              <a href="#" class="focus-ring">Know More</a>
+              <a href="schemes/mudra.html" class="focus-ring">Know More</a>
             </div>
           </div>
           <div class="card" style="--index: 5; --color-card: 19, 136, 8;" tabindex="0">
             <div class="card-content" role="article" aria-label="Stand Up India">
               <h3>Stand Up India</h3>
               <p>Accounts: 2,73,612<br>(March 2025)</p>
-              <a href="#" class="focus-ring">Know More</a>
+              <a href="schemes/standup-india.html" class="focus-ring">Know More</a>
             </div>
           </div>
         </div>
@@ -142,40 +237,92 @@
       </div>
     </section>
 
-    <!-- Recent Updates -->
+    <!-- Recent Updates & News -->
     <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4">Recent Updates</h2>
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-bold">Recent Updates & News</h2>
+        <a href="news.html" class="text-blue-600 hover:underline">View All <i class="fas fa-arrow-right"></i></a>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white shadow rounded-lg p-6">
-          <h3 class="text-lg font-semibold">Jan Suraksha Schemes Complete 10 Years</h3>
-          <p class="text-gray-600">Celebrating a decade of social security cover through PMSBY, PMJJBY, and APY.</p>
-          <a href="#" class="text-blue-600 hover:underline focus-ring">Read More</a>
+        <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+          <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/201908/pm_modi_speech_660_080819073413.jpg" alt="News" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-sm text-gray-500">March 15, 2025</span>
+            <h3 class="text-lg font-semibold mt-2">Jan Suraksha Schemes Complete 10 Years</h3>
+            <p class="text-gray-600 mt-2">Celebrating a decade of social security cover through PMSBY, PMJJBY, and APY.</p>
+            <a href="#" class="text-blue-600 hover:underline focus-ring mt-3 inline-block">Read More</a>
+          </div>
         </div>
-        <div class="bg-white shadow rounded-lg p-6">
-          <h3 class="text-lg font-semibold">Finance Minister Reviews Cybersecurity</h3>
-          <p class="text-gray-600">Smt. Nirmala Sitharaman chairs meeting on banking sector preparedness.</p>
-          <a href="#" class="text-blue-600 hover:underline focus-ring">Read More</a>
+        <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+          <img src="https://images.livemint.com/img/2024/07/23/600x338/ANI-20240622218-0_1719066017252_1721697512590.jpg" alt="News" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-sm text-gray-500">March 14, 2025</span>
+            <h3 class="text-lg font-semibold mt-2">Finance Minister Reviews Cybersecurity</h3>
+            <p class="text-gray-600 mt-2">Smt. Nirmala Sitharaman chairs meeting on banking sector preparedness.</p>
+            <a href="#" class="text-blue-600 hover:underline focus-ring mt-3 inline-block">Read More</a>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+          <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202404/interview-s-jaishankar-182720431-16x9.jpg?VersionId=pSTIikin6eW.C4XpZRN211R4lf.tt28V&size=690:388" alt="News" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-sm text-gray-500">March 13, 2025</span>
+            <h3 class="text-lg font-semibold mt-2">Digital Banking Units Cross 100 Mark</h3>
+            <p class="text-gray-600 mt-2">100+ DBUs now operational across India, bringing banking to underserved areas.</p>
+            <a href="#" class="text-blue-600 hover:underline focus-ring mt-3 inline-block">Read More</a>
+          </div>
         </div>
       </div>
-      <a href="#" class="block text-blue-600 hover:underline text-center mt-4 focus-ring">View All Updates</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="mb-8 bg-gray-50 p-8 rounded-lg">
+      <h2 class="text-2xl font-bold mb-6 text-center">Our Services</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <a href="services/bank-locator.html" class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition-shadow group">
+          <i class="fas fa-map-marker-alt text-4xl text-blue-600 mb-3 group-hover:scale-110 transition-transform"></i>
+          <h3 class="font-semibold">Bank/ATM Locator</h3>
+        </a>
+        <a href="services/complaint-portal.html" class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition-shadow group">
+          <i class="fas fa-headset text-4xl text-green-600 mb-3 group-hover:scale-110 transition-transform"></i>
+          <h3 class="font-semibold">Complaint Portal</h3>
+        </a>
+        <a href="services/scheme-finder.html" class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition-shadow group">
+          <i class="fas fa-search text-4xl text-yellow-600 mb-3 group-hover:scale-110 transition-transform"></i>
+          <h3 class="font-semibold">Scheme Finder</h3>
+        </a>
+        <a href="services/forms-downloads.html" class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition-shadow group">
+          <i class="fas fa-download text-4xl text-purple-600 mb-3 group-hover:scale-110 transition-transform"></i>
+          <h3 class="font-semibold">Forms & Downloads</h3>
+        </a>
+      </div>
     </section>
 
     <!-- Leadership -->
     <section class="mb-8">
       <h2 class="text-2xl font-bold mb-4">Leadership</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white shadow rounded-lg p-6 flex items-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white shadow rounded-lg p-6 flex items-center hover:shadow-lg transition-shadow">
           <img src="nirmala.png" alt="Smt. Nirmala Sitharaman" class="h-24 w-24 rounded-full mr-4">
           <div>
             <h3 class="text-lg font-semibold">Smt. Nirmala Sitharaman</h3>
             <p class="text-gray-600">Hon'ble Finance Minister</p>
+            <a href="leadership/finance-minister.html" class="text-blue-600 text-sm hover:underline">View Profile</a>
           </div>
         </div>
-        <div class="bg-white shadow rounded-lg p-6 flex items-center">
+        <div class="bg-white shadow rounded-lg p-6 flex items-center hover:shadow-lg transition-shadow">
           <img src="pankaj.jpg" alt="Shri Pankaj Chaudhary" class="h-24 w-24 rounded-full mr-4">
           <div>
             <h3 class="text-lg font-semibold">Shri Pankaj Chaudhary</h3>
-            <p class="text-gray-600">Hon'ble Minister of State for Finance</p>
+            <p class="text-gray-600">Hon'ble Minister of State</p>
+            <a href="leadership/minister-state.html" class="text-blue-600 text-sm hover:underline">View Profile</a>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-lg p-6 flex items-center hover:shadow-lg transition-shadow">
+          <img src="https://www.allahabadhighcourt.in/image/judges/vivekchaudhary2017.jpg" alt="Secretary" class="h-24 w-24 rounded-full mr-4">
+          <div>
+            <h3 class="text-lg font-semibold">Shri Vivek Joshi</h3>
+            <p class="text-gray-600">Secretary, DFS</p>
+            <a href="leadership/secretary.html" class="text-blue-600 text-sm hover:underline">View Profile</a>
           </div>
         </div>
       </div>
@@ -185,62 +332,138 @@
     <section class="mb-8">
       <h2 class="text-2xl font-bold mb-4">Important Links</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <h3 class="text-lg font-semibold">Regulations</h3>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-blue-600 hover:underline focus-ring">Acts and Rules</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline focus-ring">Circulars</a></li>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold mb-3"><i class="fas fa-gavel text-blue-600 mr-2"></i>Regulations</h3>
+          <ul class="space-y-2">
+            <li><a href="regulations/acts-rules.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Acts and Rules</a></li>
+            <li><a href="regulations/circulars.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Circulars</a></li>
+            <li><a href="regulations/notifications.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Notifications</a></li>
+            <li><a href="regulations/guidelines.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Guidelines</a></li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold">Reports</h3>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-blue-600 hover:underline focus-ring">Annual Reports</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline focus-ring">Major Achievements</a></li>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold mb-3"><i class="fas fa-file-alt text-green-600 mr-2"></i>Reports</h3>
+          <ul class="space-y-2">
+            <li><a href="reports/annual-reports.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Annual Reports</a></li>
+            <li><a href="reports/achievements.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Major Achievements</a></li>
+            <li><a href="reports/performance.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Performance Reports</a></li>
+            <li><a href="reports/statistical.html" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-angle-right mr-2"></i>Statistical Data</a></li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold">External Bodies</h3>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-blue-600 hover:underline focus-ring">Reserve Bank of India (RBI)</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline focus-ring">IRDAI</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline focus-ring">PFRDA</a></li>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold mb-3"><i class="fas fa-building text-purple-600 mr-2"></i>External Bodies</h3>
+          <ul class="space-y-2">
+            <li><a href="https://www.rbi.org.in" target="_blank" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-external-link-alt mr-2"></i>Reserve Bank of India</a></li>
+            <li><a href="https://www.irdai.gov.in" target="_blank" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-external-link-alt mr-2"></i>IRDAI</a></li>
+            <li><a href="https://www.pfrda.org.in" target="_blank" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-external-link-alt mr-2"></i>PFRDA</a></li>
+            <li><a href="https://www.sebi.gov.in" target="_blank" class="text-blue-600 hover:underline focus-ring flex items-center"><i class="fas fa-external-link-alt mr-2"></i>SEBI</a></li>
           </ul>
         </div>
       </div>
     </section>
+
+    <!-- Feedback Section -->
+    <section class="bg-blue-50 p-8 rounded-lg text-center">
+      <h2 class="text-2xl font-bold mb-4">We Value Your Feedback</h2>
+      <p class="text-gray-600 mb-6">Help us improve our services by sharing your experience and suggestions</p>
+      <a href="feedback.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 inline-block">
+        <i class="fas fa-comment-dots mr-2"></i>Give Feedback
+      </a>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white py-8">
+  <footer class="bg-blue-900 text-white py-8 mt-16">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div>
-          <h3 class="text-lg font-semibold">Contact Us</h3>
-          <p>Department of Financial Services, Ministry of Finance, Government of India</p>
-          <a href="#" class="text-yellow-300 hover:underline focus-ring">Contact Details</a>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <p class="text-sm">Department of Financial Services</p>
+          <p class="text-sm">Ministry of Finance</p>
+          <p class="text-sm">Government of India</p>
+          <p class="text-sm">3rd Floor, Jeevan Deep Building</p>
+          <p class="text-sm">Parliament Street, New Delhi - 110001</p>
+          <p class="text-sm mt-2"><i class="fas fa-phone"></i> +91-11-23748721</p>
+          <p class="text-sm"><i class="fas fa-envelope"></i> info-dfs@nic.in</p>
         </div>
         <div>
-          <h3 class="text-lg font-semibold">Quick Links</h3>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Feedback</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Terms of Use</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Website Policies</a></li>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="feedback.html" class="hover:text-yellow-300"><i class="fas fa-angle-right mr-1"></i>Feedback</a></li>
+            <li><a href="terms.html" class="hover:text-yellow-300"><i class="fas fa-angle-right mr-1"></i>Terms of Use</a></li>
+            <li><a href="privacy.html" class="hover:text-yellow-300"><i class="fas fa-angle-right mr-1"></i>Privacy Policy</a></li>
+            <li><a href="disclaimer.html" class="hover:text-yellow-300"><i class="fas fa-angle-right mr-1"></i>Disclaimer</a></li>
+            <li><a href="sitemap.html" class="hover:text-yellow-300"><i class="fas fa-angle-right mr-1"></i>Sitemap</a></li>
+            <li><a href="accessibility.html" class="hover:text-yellow-300"><i class="fas fa-angle-right mr-1"></i>Accessibility</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-semibold">Stats</h3>
-          <p>Total Visitors: 1,636,158</p>
-          <p>Last Updated: May 13, 2025</p>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="mt-4">
+            <h4 class="font-semibold mb-2">Subscribe Newsletter</h4>
+            <form class="flex">
+              <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l text-gray-800 flex-1">
+              <button type="submit" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded-r hover:bg-yellow-500">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Website Stats</h3>
+          <p class="text-sm"><i class="fas fa-users"></i> Total Visitors: <span id="visitorCount">1,636,158</span></p>
+          <p class="text-sm"><i class="fas fa-user"></i> Today's Visitors: <span id="todayVisitors">2,341</span></p>
+          <p class="text-sm"><i class="fas fa-eye"></i> Page Views: <span id="pageViews">5,234,789</span></p>
+          <p class="text-sm mt-2"><i class="fas fa-clock"></i> Last Updated: May 13, 2025</p>
+          <div class="mt-4">
+            <img src="/Digital_India_logo.png" alt="Digital India" class="h-12">
+          </div>
         </div>
       </div>
-      <p class="text-center mt-8">Website Content Managed and Owned by Department of Financial Services</p>
+      <div class="border-t border-blue-800 mt-8 pt-6 text-center text-sm">
+        <p>© 2025 Department of Financial Services. All rights reserved.</p>
+        <p>Website Content Managed and Owned by Department of Financial Services, Ministry of Finance, Government of India</p>
+        <p>Designed, Developed and Hosted by National Informatics Centre (NIC)</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript for Pause Button and Theme Toggle -->
-  <script src="index.js">
-    
-  </script>
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden hover:bg-blue-700 transitions-all">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Chat Support Widget -->
+  <div id="chatWidget" class="fixed bottom-4 left-4 z-50">
+    <button onclick="toggleChat()" class="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700">
+      <i class="fas fa-comments"></i>
+    </button>
+    <div id="chatBox" class="hidden bg-white rounded-lg shadow-xl w-80 mb-2">
+      <div class="bg-green-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+        <h3 class="font-semibold">DFS Support</h3>
+        <button onclick="toggleChat()" class="text-xl">&times;</button>
+      </div>
+      <div class="p-4 h-64 overflow-y-auto" id="chatMessages">
+        <div class="bg-gray-100 p-3 rounded mb-2">
+          <p class="text-sm">Welcome to DFS Support! How can I help you today?</p>
+        </div>
+      </div>
+      <div class="p-4 border-t">
+        <form onsubmit="sendMessage(event)" class="flex">
+          <input type="text" id="chatInput" placeholder="Type your message..." class="flex-1 border rounded-l px-3 py-2">
+          <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-r hover:bg-green-700">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="index.js"></script>
 </body>
 </html>

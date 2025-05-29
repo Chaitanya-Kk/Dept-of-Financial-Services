@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Inclusion - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #3b82f6;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #3b82f6;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            .timeline-item::before {
+                left: 30px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Include header from index.html -->
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li>/</li>
+                <li class="text-gray-600">Financial Inclusion</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold mb-4">Financial Inclusion</h1>
+            <p class="text-xl mb-6">Empowering every Indian with access to formal financial services</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white/20 rounded p-4 text-center">
+                    <i class="fas fa-university text-3xl mb-2"></i>
+                    <h3 class="font-semibold">55.18 Cr</h3>
+                    <p class="text-sm">Jan Dhan Accounts</p>
+                </div>
+                <div class="bg-white/20 rounded p-4 text-center">
+                    <i class="fas fa-credit-card text-3xl mb-2"></i>
+                    <h3 class="font-semibold">34.42 Cr</h3>
+                    <p class="text-sm">RuPay Cards</p>
+                </div>
+                <div class="bg-white/20 rounded p-4 text-center">
+                    <i class="fas fa-hand-holding-usd text-3xl mb-2"></i>
+                    <h3 class="font-semibold">₹2.03 Lakh Cr</h3>
+                    <p class="text-sm">Deposits</p>
+                </div>
+                <div class="bg-white/20 rounded p-4 text-center">
+                    <i class="fas fa-users text-3xl mb-2"></i>
+                    <h3 class="font-semibold">14.58 Lakh</h3>
+                    <p class="text-sm">Bank Mitras</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Initiatives -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">Key Financial Inclusion Initiatives</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- PMJDY Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-orange-500 p-4">
+                        <i class="fas fa-piggy-bank text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Pradhan Mantri Jan Dhan Yojana</h3>
+                        <p class="text-gray-600 mb-4">Universal access to banking facilities with at least one basic bank account for every household.</p>
+                        <ul class="text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Zero balance account</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>RuPay Debit Card</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Accident Insurance Cover</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Overdraft facility</li>
+                        </ul>
+                        <a href="schemes/jan-dhan.html" class="text-blue-600 hover:underline">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Direct Benefit Transfer -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-green-500 p-4">
+                        <i class="fas fa-exchange-alt text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Direct Benefit Transfer (DBT)</h3>
+                        <p class="text-gray-600 mb-4">Transferring subsidies directly to the bank accounts of beneficiaries.</p>
+                        <ul class="text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>439 Schemes onboarded</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>₹27.86 Lakh Cr transferred</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Eliminates leakages</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Timely payment</li>
+                        </ul>
+                        <a href="schemes/dbt.html" class="text-blue-600 hover:underline">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Digital Payments -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-blue-500 p-4">
+                        <i class="fas fa-mobile-alt text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Digital Payment Ecosystem</h3>
+                        <p class="text-gray-600 mb-4">Promoting cashless transactions through various digital payment modes.</p>
+                        <ul class="text-sm space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>UPI transactions</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>BHIM App</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Aadhaar Pay</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>QR Code payments</li>
+                        </ul>
+                        <a href="schemes/digital-payments.html" class="text-blue-600 hover:underline">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Literacy -->
+        <section class="bg-yellow-50 rounded-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold mb-6">Financial Literacy & Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">National Centre for Financial Education (NCFE)</h3>
+                    <p class="text-gray-700 mb-4">
+                        NCFE conducts financial literacy programs across the country to create awareness about financial products and services.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-graduation-cap text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">School Programs</h4>
+                                <p class="text-sm text-gray-600">Financial education integrated into school curriculum</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-green-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Community Programs</h4>
+                                <p class="text-sm text-gray-600">Camps and workshops in rural and urban areas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-mobile text-purple-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Digital Initiatives</h4>
+                                <p class="text-sm text-gray-600">Online courses and mobile apps for financial literacy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4">Quick Resources</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="flex items-center text-blue-600 hover:underline">
+                                <i class="fas fa-book mr-3"></i>Financial Literacy Booklet (Hindi)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-blue-600 hover:underline">
+                                <i class="fas fa-book mr-3"></i>Financial Literacy Booklet (English)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-blue-600 hover:underline">
+                                <i class="fas fa-video mr-3"></i>Video Tutorials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-blue-600 hover:underline">
+                                <i class="fas fa-calculator mr-3"></i>Financial Calculators
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Journey of Financial Inclusion</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-5/12 text-right pr-8">
+                            <h3 class="text-xl font-semibold">August 2014</h3>
+                            <p class="text-gray-600">Launch of Pradhan Mantri Jan Dhan Yojana</p>
+                        </div>
+                        <div class="md:w-2/12"></div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-5/12"></div>
+                        <div class="md:w-2/12"></div>
+                        <div class="md:w-5/12 pl-8">
+                            <h3 class="text-xl font-semibold">May 2015</h3>
+                            <p class="text-gray-600">Launch of PMJJBY, PMSBY & APY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-5/12 text-right pr-8">
+                            <h3 class="text-xl font-semibold">April 2016</h3>
+                            <p class="text-gray-600">Launch of Stand Up India & MUDRA</p>
+                        </div>
+                        <div class="md:w-2/12"></div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-5/12"></div>
+                        <div class="md:w-2/12"></div>
+                        <div class="md:w-5/12 pl-8">
+                            <h3 class="text-xl font-semibold">December 2019</h3>
+                            <p class="text-gray-600">Launch of Aadhaar enabled Payment System</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-5/12 text-right pr-8">
+                            <h3 class="text-xl font-semibold">October 2022</h3>
+                            <p class="text-gray-600">75 Digital Banking Units launched</p>
+                        </div>
+                        <div class="md:w-2/12"></div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Impact of Financial Inclusion</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg p-6 text-center shadow">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">80%</div>
+                    <p class="text-gray-600">Adult Population with Bank Accounts</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center shadow">
+                    <div class="text-4xl font-bold text-green-600 mb-2">₹2.8L Cr</div>
+                    <p class="text-gray-600">DBT Savings</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center shadow">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">67%</div>
+                    <p class="text-gray-600">Women Account Holders</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center shadow">
+                    <div class="text-4xl font-bold text-orange-600 mb-2">8,840 Cr</div>
+                    <p class="text-gray-600">Digital Transactions (FY24)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-blue-900 text-white rounded-lg p-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Be Part of India's Financial Inclusion Journey</h2>
+            <p class="text-xl mb-6">Open your Jan Dhan account today and access all government financial services</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://pmjdy.gov.in" target="_blank" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
+                    Open Jan Dhan Account
+                </a>
+                <a href="services/bank-locator.html" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    Find Nearest Bank
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <script src="index.js"></script>
+</body>
+</html>
