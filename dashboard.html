@@ -1,226 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="User Dashboard - Department of Financial Services, Ministry of Finance, Government of India">
-  <title>User Dashboard | Department of Financial Services</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="dash.css">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
-  <!-- Skip to main content -->
-  <a href="#main-content" class="sr-only focus:not-sr-only bg-blue-700 text-white p-2 focus-ring">Skip to main content</a>
-
-  <!-- Header -->
-  <header class="bg-white shadow sticky">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center">
-        <img src="logo.jpg" alt="Government of India Logo" class="h-12">
-        <div class="ml-4">
-          <h1 class="text-xl font-bold text-blue-900">Department of Financial Services</h1>
-          <p class="text-sm text-gray-600">Ministry of Finance, Government of India</p>
-        </div>
-      </div>
-      <div class="flex items-center space-x-4">
-        <div class="relative">
-          <input type="search" placeholder="Search..." aria-label="Search" class="border rounded p-1 pl-8 focus-ring">
-          <svg class="absolute left-2 top-2 h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </div>
-        <!-- BB-8 Toggle -->
-        <label class="bb8-toggle">
-          <input class="bb8-toggle__checkbox" type="checkbox" id="theme-toggle">
-          <div class="bb8-toggle__container">
-            <div class="bb8-toggle__scenery">
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="tatto-1"></div>
-              <div class="tatto-2"></div>
-              <div class="gomrassen"></div>
-              <div class="hermes"></div>
-              <div class="chenini"></div>
-              <div class="bb8-toggle__cloud"></div>
-              <div class="bb8-toggle__cloud"></div>
-              <div class="bb8-toggle__cloud"></div>
+<body class="bg-gray-100">
+    <!-- Dashboard Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="logo.jpg" alt="Government of India Logo" class="h-12">
+                    <div class="ml-4">
+                        <h1 class="text-xl font-bold text-blue-900">Consumer Dashboard</h1>
+                        <p class="text-sm text-gray-600">Department of Financial Services</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <button class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-bell"></i>
+                            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <button onclick="toggleProfileMenu()" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                            <img src="https://via.placeholder.com/40" alt="Profile" class="w-10 h-10 rounded-full">
+                            <span>John Doe</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="profileMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"><i class="fas fa-user mr-2"></i>Profile</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"><i class="fas fa-cog mr-2"></i>Settings</a>
+                            <hr class="my-2">
+                            <a href="index.html" class="block px-4 py-2 hover:bg-gray-100 text-red-600"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bb8">
-              <div class="bb8__head-container">
-                <div class="bb8__antenna"></div>
-                <div class="bb8__antenna"></div>
-                <div class="bb8__head"></div>
-              </div>
-              <div class="bb8__body"></div>
+        </div>
+    </header>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-blue-900 text-white min-h-screen">
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded hover:bg-blue-800 bg-blue-800">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded hover:bg-blue-800">
+                            <i class="fas fa-university"></i>
+                            <span>My Accounts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded hover:bg-blue-800">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>My Schemes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded hover:bg-blue-800">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Applications</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded hover:bg-blue-800">
+                            <i class="fas fa-history"></i>
+                            <span>Transaction History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded hover:bg-blue-800">
+                            <i class="fas fa-file-download"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded hover:bg-blue-800">
+                            <i class="fas fa-headset"></i>
+                            <span>Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Welcome Section -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-2">Welcome back, John!</h2>
+                <p>Your financial overview at a glance</p>
             </div>
-            <div class="artificial__hidden">
-              <div class="bb8__shadow"></div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fas fa-piggy-bank text-3xl text-blue-600"></i>
+                        <span class="text-sm text-green-600">+12%</span>
+                    </div>
+                    <h3 class="text-2xl font-bold">₹45,678</h3>
+                    <p class="text-gray-600">Total Savings</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fas fa-shield-alt text-3xl text-green-600"></i>
+                        <span class="text-sm text-green-600">Active</span>
+                    </div>
+                    <h3 class="text-2xl font-bold">3</h3>
+                    <p class="text-gray-600">Active Schemes</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fas fa-credit-card text-3xl text-purple-600"></i>
+                        <span class="text-sm text-gray-600">RuPay</span>
+                    </div>
+                    <h3 class="text-2xl font-bold">2</h3>
+                    <p class="text-gray-600">Active Cards</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fas fa-rupee-sign text-3xl text-yellow-600"></i>
+                        <span class="text-sm text-green-600">Credited</span>
+                    </div>
+                    <h3 class="text-2xl font-bold">₹2,500</h3>
+                    <p class="text-gray-600">Last DBT Amount</p>
+                </div>
             </div>
-          </div>
-        </label>
-      </div>
+
+            <!-- Charts Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4">Transaction Overview</h3>
+                    <canvas id="transactionChart" height="200"></canvas>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4">Scheme Benefits</h3>
+                    <canvas id="benefitChart" height="200"></canvas>
+                </div>
+            </div>
+
+            <!-- Recent Activities -->
+            <div class="bg-white rounded-lg shadow">
+                <div class="p-6 border-b">
+                    <h3 class="text-xl font-semibold">Recent Activities</h3>
+                </div>
+                <div class="p-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-green-100 p-3 rounded-full">
+                                    <i class="fas fa-arrow-down text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">DBT Credit</h4>
+                                    <p class="text-sm text-gray-600">PM-KISAN Installment</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold text-green-600">+₹2,000</p>
+                                <p class="text-sm text-gray-600">Mar 10, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-blue-100 p-3 rounded-full">
+                                    <i class="fas fa-file-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Application Submitted</h4>
+                                    <p class="text-sm text-gray-600">Atal Pension Yojana</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold text-blue-600">Pending</p>
+                                <p class="text-sm text-gray-600">Mar 8, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-purple-100 p-3 rounded-full">
+                                    <i class="fas fa-shield-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Insurance Premium Paid</h4>
+                                    <p class="text-sm text-gray-600">PMJJBY Annual Premium</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold text-red-600">-₹436</p>
+                                <p class="text-sm text-gray-600">Mar 5, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">Quick Actions</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <button class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <i class="fas fa-plus-circle text-3xl text-blue-600 mb-2"></i>
+                        <p class="font-semibold">Apply for Scheme</p>
+                    </button>
+                    <button class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <i class="fas fa-download text-3xl text-green-600 mb-2"></i>
+                        <p class="font-semibold">Download Statement</p>
+                    </button>
+                    <button class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <i class="fas fa-sync text-3xl text-purple-600 mb-2"></i>
+                        <p class="font-semibold">Update KYC</p>
+                    </button>
+                    <button class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <i class="fas fa-headset text-3xl text-orange-600 mb-2"></i>
+                        <p class="font-semibold">Raise Complaint</p>
+                    </button>
+                </div>
+            </div>
+        </main>
     </div>
-    <nav class="bg-blue-900 text-white">
-      <div class="container mx-auto px-4">
-        <ul class="flex space-x-4 py-3">
-          <li><a href="index.html" class="hover:text-yellow-300 focus-ring">Who We Are</a></li>
-          <li><a href="banking.html" class="hover:text-yellow-300 focus-ring">Banking</a></li>
-          <li><a href="Insurance.html" class="hover:text-yellow-300 focus-ring">Insurance</a></li>
-          <li><a href="Financial Inclusion.html" class="hover:text-yellow-300 focus-ring">Financial Inclusion</a></li>
-          <li><a href="Cyber Security & Fintech.html" class="hover:text-yellow-300 focus-ring">Cyber Security & Fintech</a></li>
-          <li><a href="RTI.html" class="hover:text-yellow-300 focus-ring">RTI</a></li>
-          <li><a href="signup.html" class="text-yellow-300 focus-ring">User Dashboard</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
 
-  <!-- Main Content -->
-  <main id="main-content" class="container mx-auto px-4 py-8">
-    <h2 class="text-2xl font-bold text-blue-900 mb-6">User Dashboard</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- User Profile -->
-      <section class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-lg font-semibold text-blue-900 mb-4">User Profile</h3>
-        <div class="flex items-center mb-4">
-          <img id="profile-image" src="profile-placeholder.jpg" alt="User Profile Picture" class="h-16 w-16 rounded-full mr-4">
-          <div>
-            <p id="profile-name" class="font-medium text-gray-800">John Doe</p>
-            <p id="profile-email" class="text-sm text-gray-600">john.doe@example.com</p>
-          </div>
-        </div>
-        <p class="text-sm text-gray-600 mb-4">User ID: DFS-123456</p>
-        <button id="update-profile-btn" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 focus-ring">Update Profile</button>
-      </section>
+    <script>
+        // Profile Menu Toggle
+        function toggleProfileMenu() {
+            const menu = document.getElementById('profileMenu');
+            menu.classList.toggle('hidden');
+        }
 
-      <!-- Government Schemes -->
-      <section class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-lg font-semibold text-blue-900 mb-4">Government Schemes</h3>
-        <div class="space-y-4">
-          <div>
-            <p class="text-sm text-gray-600">Pradhan Mantri Jan Dhan Yojana</p>
-            <p class="text-lg font-medium text-gray-800">Application Status: Approved</p>
-          </div>
-          <div>
-            <p class="text-sm text-gray-600">PM Suraksha Bima Yojana</p>
-            <p class="text-lg font-medium text-gray-800">Enrollment: Active</p>
-          </div>
-          <div>
-            <p class="text-sm text-gray-600">Atal Pension Yojana</p>
-            <p class="text-lg font-medium text-gray-800">Application Status: Pending</p>
-          </div>
-          <a href="#" class="text-yellow-300 hover:underline focus-ring">Apply for New Scheme</a>
-        </div>
-      </section>
+        // Close profile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const profileMenu = document.getElementById('profileMenu');
+            const profileButton = event.target.closest('button[onclick="toggleProfileMenu()"]');
+            
+            if (!profileButton && !profileMenu.contains(event.target)) {
+                profileMenu.classList.add('hidden');
+            }
+        });
 
-      <!-- Grievance Status -->
-      <section class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-lg font-semibold text-blue-900 mb-4">Grievance Status</h3>
-        <ul class="space-y-4">
-          <li class="flex justify-between text-sm">
-            <span>Grievance #GRV12345</span>
-            <span class="text-gray-600">Status: Under Review (May 20, 2025)</span>
-          </li>
-          <li class="flex justify-between text-sm">
-            <span>Grievance #GRV12344</span>
-            <span class="text-gray-600">Status: Resolved (May 15, 2025)</span>
-          </li>
-          <li class="flex justify-between text-sm">
-            <span>Grievance #GRV12343</span>
-            <span class="text-gray-600">Status: Submitted (May 10, 2025)</span>
-          </li>
-          <li class="flex justify-between text-sm">
-            <span>Grievance #GRV12342</span>
-            <span class="text-gray-600">Status: Resolved (May 5, 2025)</span>
-          </li>
-          <a href="#" class="text-yellow-300 hover:underline focus-ring">File a New Grievance</a>
-        </ul>
-      </section>
-    </div>
+        // Transaction Chart
+        const transactionCtx = document.getElementById('transactionChart').getContext('2d');
+        new Chart(transactionCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Credits',
+                    data: [3000, 2500, 4000, 3500, 5000, 4500],
+                    borderColor: 'rgb(34, 197, 94)',
+                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                    tension: 0.3
+                }, {
+                    label: 'Debits',
+                    data: [2000, 1500, 2500, 2000, 3000, 2500],
+                    borderColor: 'rgb(239, 68, 68)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '₹' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
 
-    <!-- Notifications -->
-    <section class="bg-white p-6 rounded-lg shadow mt-6">
-      <h3 class="text-lg font-semibold text-blue-900 mb-4">Notifications</h3>
-      <ul class="space-y-4">
-        <li class="flex justify-between text-sm">
-          <span>New Scheme Launched: PM Mudra Yojana 2.0</span>
-          <span class="text-gray-600">May 25, 2025</span>
-        </li>
-        <li class="flex justify-between text-sm">
-          <span>Grievance #GRV12344 Resolved</span>
-          <span class="text-gray-600">May 15, 2025</span>
-        </li>
-        <li class="flex justify-between text-sm">
-          <span>Upcoming Deadline: APY Application</span>
-          <span class="text-gray-600">May 30, 2025</span>
-        </li>
-        <a href="#" class="text-yellow-300 hover:underline focus-ring">View All Notifications</a>
-      </ul>
-    </section>
-
-    <!-- Update Profile Modal -->
-    <div id="profile-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2 class="text-xl font-bold text-blue-900 mb-4">Update Profile</h2>
-        <div class="space-y-4">
-          <div>
-            <img id="modal-profile-image" src="profile-placeholder.jpg" alt="Profile Image Preview" class="profile-image-preview">
-            <label for="profile-image-upload" class="block text-sm font-medium text-gray-600">Upload Profile Image</label>
-            <input id="profile-image-upload" type="file" accept="image/*" class="border rounded p-2 w-full focus-ring">
-          </div>
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-600">Name</label>
-            <input id="name" type="text" value="John Doe" class="border rounded p-2 w-full focus-ring" required>
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-            <input id="email" type="email" value="john.doe@example.com" class="border rounded p-2 w-full focus-ring" required>
-          </div>
-          <div class="flex justify-end space-x-2">
-            <button id="cancel-btn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 focus-ring">Cancel</button>
-            <button id="save-btn" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 focus-ring">Save</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white py-8">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <h3 class="text-lg font-semibold">Contact Us</h3>
-          <p>Department of Financial Services, Ministry of Finance, Government of India</p>
-          <a href="#" class="text-yellow-300 hover:underline focus-ring">Contact Details</a>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Quick Links</h3>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Feedback</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Terms of Use</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Website Policies</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Stats</h3>
-          <p>Total Visitors: 1,636,158</p>
-          <p>Last Updated: May 13, 2025</p>
-        </div>
-      </div>
-      <p class="text-center mt-8">Website Content Managed and Owned by Department of Financial Services</p>
-    </div>
-  </footer>
-
-  <script src="dash.js">
-
-  </script>
+        // Benefit Chart
+        const benefitCtx = document.getElementById('benefitChart').getContext('2d');
+        new Chart(benefitCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['PM-KISAN', 'PMJJBY', 'PMSBY', 'APY', 'Others'],
+                datasets: [{
+                    data: [12000, 436, 20, 5000, 2500],
+                    backgroundColor: [
+                        'rgb(59, 130, 246)',
+                        'rgb(34, 197, 94)',
+                        'rgb(251, 146, 60)',
+                        'rgb(147, 51, 234)',
+                        'rgb(107, 114, 128)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right'
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

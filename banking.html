@@ -1,160 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Banking- Department of Financial Services, Ministry of Finance, Government of India">
-  <title>Banking | Department of Financial Services</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="bank.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Banking Division - Department of Financial Services oversees public sector banks, private banks, regional rural banks, and cooperative banks in India.">
+    <title>Banking - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .bank-card {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .bank-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+        .stats-counter {
+            animation: countUp 2s ease-out;
+        }
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
-  <!-- Skip to main content -->
-  <a href="#main-content" class="sr-only focus:not-sr-only bg-blue-700 text-white p-2 focus-ring">Skip to main content</a>
+    <!-- Include header from index.html -->
+    <div id="header-placeholder"></div>
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li class="text-gray-500">/</li>
+                <li class="text-gray-600">Banking</li>
+            </ol>
+        </nav>
 
-  <!-- Header -->
-  <header class="bg-white shadow sticky">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center">
-        <img src="logo.jpg" alt="Government of India Logo" class="h-12">
-        <div class="ml-4">
-          <h1 class="text-xl font-bold text-blue-900">Department of Financial Services</h1>
-          <p class="text-sm text-gray-600">Ministry of Finance, Government of India</p>
+        <!-- Page Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold mb-4">Banking Division</h1>
+            <p class="text-xl">Strengthening India's Banking Sector for Inclusive Growth</p>
         </div>
-      </div>
-      <div class="flex items-center space-x-4">
-        <div class="relative">
-          <input type="search" placeholder="Search..." aria-label="Search" class="border rounded p-1 pl-8 focus-ring">
-          <svg class="absolute left-2 top-2 h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </div>
-        <!-- BB-8 Toggle -->
-        <label class="bb8-toggle">
-          <input class="bb8-toggle__checkbox" type="checkbox" id="theme-toggle">
-          <div class="bb8-toggle__container">
-            <div class="bb8-toggle__scenery">
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="tatto-1"></div>
-              <div class="tatto-2"></div>
-              <div class="gomrassen"></div>
-              <div class="hermes"></div>
-              <div class="chenini"></div>
-              <div class="bb8-toggle__cloud"></div>
-              <div class="bb8-toggle__cloud"></div>
-              <div class="bb8-toggle__cloud"></div>
+
+        <!-- Quick Stats -->
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white rounded-lg shadow p-6 text-center stats-counter">
+                <i class="fas fa-university text-4xl text-blue-600 mb-3"></i>
+                <h3 class="text-3xl font-bold text-gray-800" data-count="12">0</h3>
+                <p class="text-gray-600">Public Sector Banks</p>
             </div>
-            <div class="bb8">
-              <div class="bb8__head-container">
-                <div class="bb8__antenna"></div>
-                <div class="bb8__antenna"></div>
-                <div class="bb8__head"></div>
-              </div>
-              <div class="bb8__body"></div>
+            <div class="bg-white rounded-lg shadow p-6 text-center stats-counter">
+                <i class="fas fa-building text-4xl text-green-600 mb-3"></i>
+                <h3 class="text-3xl font-bold text-gray-800" data-count="159627">0</h3>
+                <p class="text-gray-600">Total Bank Branches</p>
             </div>
-            <div class="artificial__hidden">
-              <div class="bb8__shadow"></div>
+            <div class="bg-white rounded-lg shadow p-6 text-center stats-counter">
+                <i class="fas fa-credit-card text-4xl text-purple-600 mb-3"></i>
+                <h3 class="text-3xl font-bold text-gray-800" data-count="213458">0</h3>
+                <p class="text-gray-600">ATMs Across India</p>
             </div>
-          </div>
-        </label>
-      </div>
-    </div>
-    <nav class="bg-blue-900 text-white">
-      <div class="container mx-auto px-4">
-        <ul class="flex space-x-4 py-3">
-          <li><a href="index.html" class="hover:text-yellow-300 focus-ring">Who We Are</a></li>
-          <li><a href="banking.html" class="text-yellow-300 focus-ring">Banking</a></li>
-          <li><a href="Insurance.html" class="hover:text-yellow-300 focus-ring">Insurance</a></li>
-          <li><a href="Financial Inclusion.html" class="hover:text-yellow-300 focus-ring">Financial Inclusion</a></li>
-          <li><a href="Cyber Security & Fintech.html" class="hover:text-yellow-300 focus-ring">Cyber Security & Fintech</a></li>
-          <li><a href="RTI.html" class="hover:text-yellow-300 focus-ring">RTI</a></li>
-          <li><a href="signup.html" class="hover:text-yellow-300 focus-ring">Consumer Signup / Login</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+            <div class="bg-white rounded-lg shadow p-6 text-center stats-counter">
+                <i class="fas fa-users text-4xl text-orange-600 mb-3"></i>
+                <h3 class="text-3xl font-bold text-gray-800" data-count="1458000">0</h3>
+                <p class="text-gray-600">Banking Correspondents</p>
+            </div>
+        </section>
 
-  <!-- Main Content -->
-  <main id="main-content" class="container mx-auto px-4 py-8">
-    <!-- RTI Introduction (Corrected to Banking Overview) -->
-    <section class="bg-blue-900 text-white rounded-lg p-8 mb-8">
-      <h2 class="text-3xl font-bold mb-4">Banking Overview</h2>
-      <p class="text-lg mb-4">There are multiple layers in today's banking structure to cater to the specific and varied requirements of different customers and borrowers. The banking ecosystem is providing impetus to economic growth and development of the country and catering to the specific and varied financial requirements of different customers and borrowers.</p>
-    </section>
-    <div class="content-block">
-        <h2 class="text-2xl font-bold mb-4">Banking Overview</h2>
-        <p class="text-lg mb-4">There are multiple layers in today's banking structure to cater to the specific and varied requirements of different customers and borrowers. The banking ecosystem is providing impetus to economic growth and development of the country and catering to the specific and varied financial requirements of different customers and borrowers.</p>
-    </div>
-    <!-- Digital Banking Initiatives -->
-    <div class="digital-banking content-block">
-        <h3 class="text-xl font-semibold mb-4">Digital Banking Initiatives</h3>
-        <p class="text-lg mb-4">The Department of Financial Services has spearheaded numerous digital banking initiatives to enhance accessibility and efficiency. Programs like the Unified Payments Interface (UPI), Aadhaar-enabled payment systems, and mobile banking platforms have revolutionized financial transactions, enabling seamless, secure, and instant payments across the country.</p>
-        <ul class="list-disc pl-5 mb-4">
-          <li><strong>UPI:</strong> Facilitates instant inter-bank transactions via mobile phones.</li>
-          <li><strong>BHIM App:</strong> A secure platform for digital payments linked to Aadhaar.</li>
-          <li><strong>Digital Lending:</strong> Streamlined loan processes through online portals.</li>
-        </ul>
-        <p class="text-lg">These initiatives align with the vision of a Digital India, promoting financial inclusion and reducing dependency on cash-based transactions.</p>
-    </div>
-    <!-- Quick Facts -->
-    <aside class="quick-facts bg-gray-200 rounded-lg p-6 mb-8">
-        <h3 class="text-xl font-semibold mb-4">Quick Facts</h3>
-        <ul class="list-disc pl-5">
-          <li>Over 1.4 billion bank accounts opened under financial inclusion schemes.</li>
-          <li>UPI transactions crossed 10 billion in volume in 2024.</li>
-          <li>More than 500,000 banking touchpoints established in rural areas.</li>
-          <li>Digital banking penetration reached 80% in urban India by 2025.</li>
-        </ul>
-    </aside>
-    <!-- Banking Structure -->
-    <div class="content-block">
-        <h3 class="text-xl font-semibold mb-4">Banking Structure</h3>
-        <p class="text-lg mb-4">India's banking structure is a robust framework comprising various types of banks to serve diverse economic needs. These include:</p>
-        <ul class="list-disc pl-5 mb-4">
-          <li><strong>Scheduled Commercial Banks:</strong> Public, private, and foreign banks offering a wide range of services.</li>
-          <li><strong>Regional Rural Banks (RRBs):</strong> Focused on agricultural and rural development.</li>
-          <li><strong>Cooperative Banks:</strong> Catering to small-scale industries and local communities.</li>
-          <li><strong>Small Finance Banks:</strong> Promoting financial inclusion for underserved sections.</li>
-          <li><strong>Payments Banks:</strong> Facilitating digital transactions and remittances.</li>
-        </ul>
-        <p class="text-lg">This multi-tiered structure ensures comprehensive coverage, supporting both urban and rural populations while fostering economic growth.</p>
-    </div>
-  </main>
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Overview -->
+                <section class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Overview</h2>
+                    <p class="text-gray-700 mb-4">
+                        The Banking Division of the Department of Financial Services is responsible for policy formulation 
+                        and implementation in the banking sector. We oversee the functioning of Public Sector Banks (PSBs), 
+                        monitor their performance, and ensure financial inclusion through various government schemes.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Our primary objectives include strengthening the banking system, improving credit flow to productive 
+                        sectors, ensuring customer protection, and promoting digital banking initiatives across the country.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="bg-blue-50 p-4 rounded">
+                            <h3 class="font-semibold text-blue-900">Our Focus</h3>
+                            <ul class="text-sm mt-2 space-y-1">
+                                <li>• Financial Inclusion</li>
+                                <li>• Digital Banking</li>
+                                <li>• Credit Flow Enhancement</li>
+                                <li>• NPA Resolution</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded">
+                            <h3 class="font-semibold text-green-900">Key Initiatives</h3>
+                            <ul class="text-sm mt-2 space-y-1">
+                                <li>• Bank Consolidation</li>
+                                <li>• Capital Infusion</li>
+                                <li>• Governance Reforms</li>
+                                <li>• Technology Adoption</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white py-8">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <h3 class="text-lg font-semibold">Contact Us</h3>
-          <p>Department of Financial Services, Ministry of Finance, Government of India</p>
-          <a href="#" class="text-yellow-300 hover:underline focus-ring">Contact Details</a>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Quick Links</h3>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Feedback</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Terms of Use</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Website Policies</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Stats</h3>
-          <p>Total Visitors: 1,636,158</p>
-          <p>Last Updated: May 13, 2025</p>
-        </div>
-      </div>
-      <p class="text-center mt-8">Website Content Managed and Owned by Department of Financial Services</p>
-    </div>
-  </footer>
+                <!-- Banking Reforms -->
+                <section class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h2 class="text-2xl font-semibold mb-6">Recent Banking Reforms</h2>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-blue-500 pl-4 hover:bg-gray-50 p-4 rounded transition">
+                            <h3 class="font-semibold text-lg">Digital Banking Units (DBUs)</h3>
+                            <p class="text-gray-700 text-sm mt-1">
+                                75 Digital Banking Units established across 75 districts to provide paperless, 
+                                efficient and secure banking services with 24x7 self-service capabilities.
+                            </p>
+                            <a href="#" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Learn more →</a>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4 hover:bg-gray-50 p-4 rounded transition">
+                            <h3 class="font-semibold text-lg">Bank Consolidation</h3>
+                            <p class="text-gray-700 text-sm mt-1">
+                                Merger of 10 PSBs into 4 to create banks of scale, enhance capacity to support 
+                                economic growth and improve operational efficiency.
+                            </p>
+                            <a href="#" class="text-blue-600 text-sm hover:underline mt-2 inline-block">View details →</a>
+                        </div>
+                        <div class="border-l-4 border-purple-500 pl-4 hover:bg-gray-50 p-4 rounded transition">
+                            <h3 class="font-semibold text-lg">EASE Reforms</h3>
+                            <p class="text-gray-700 text-sm mt-1">
+                                Enhanced Access & Service Excellence (EASE) reforms for PSBs focusing on 
+                                customer responsiveness, credit off-take, and digital capabilities.
+                            </p>
+                            <a href="#" class="text-blue-600 text-sm hover:underline mt-2 inline-block">EASE Dashboard →</a>
+                        </div>
+                        <div class="border-l-4 border-yellow-500 pl-4 hover:bg-gray-50 p-4 rounded transition">
+                            <h3 class="font-semibold text-lg">Capital Infusion</h3>
+                            <p class="text-gray-700 text-sm mt-1">
+                                Government infused ₹3.50 lakh crore in PSBs to strengthen their capital base 
+                                and enhance lending capacity for economic growth.
+                            </p>
+                            <a href="#" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Read more →</a>
+                        </div>
+                    </div>
+                </section>
 
-  <!-- JavaScript for Theme Toggle -->
-  <script src="bank.js"></script>
+                <!-- Types of Banks -->
+                <section class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h2 class="text-2xl font-semibold mb-6">Banking Ecosystem in India</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a href="public-sector-banks.html" class="bank-card bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg">
+                            <i class="fas fa-landmark text-3xl text-blue-600 mb-3"></i>
+                            <h3 class="font-semibold text-lg mb-2">Public Sector Banks</h3>
+                            <p class="text-gray-600 text-sm">12 PSBs serving as the backbone of Indian banking</p>
+                            <span class="text-blue-600 text-sm font-semibold mt-3 inline-block">Explore →</span>
+                        </a>
+                        <a href="private-banks.html" class="bank-card bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg">
+                            <i class="fas fa-building text-3xl text-green-600 mb-3"></i>
+                            <h3 class="font-semibold text-lg mb-2">Private Banks</h3>
+                            <p class="text-gray-600 text-sm">21 private banks driving innovation in banking</p>
+                            <span class="text-green-600 text-sm font-semibold mt-3 inline-block">Explore →</span>
+                        </a>
+                        <a href="regional-rural-banks.html" class="bank-card bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg">
+                            <i class="fas fa-tractor text-3xl text-orange-600 mb-3"></i>
+                            <h3 class="font-semibold text-lg mb-2">Regional Rural Banks</h3>
+                            <p class="text-gray-600 text-sm">43 RRBs serving rural and semi-urban areas</p>
+                            <span class="text-orange-600 text-sm font-semibold mt-3 inline-block">Explore →</span>
+                        </a>
+                        <a href="cooperative-banks.html" class="bank-card bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg">
+                            <i class="fas fa-hands-helping text-3xl text-purple-600 mb-3"></i>
+                            <h3 class="font-semibold text-lg mb-2">Cooperative Banks</h3>
+                            <p class="text-gray-600 text-sm">Urban and rural cooperative banks network</p>
+                            <span class="text-purple-600 text-sm font-semibold mt-3 inline-block">Explore →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Performance Metrics -->
+                <section class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-2xl font-semibold mb-6">Banking Sector Performance</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium">Credit Growth</span>
+                                <span class="text-sm font-bold text-green-600">15.4%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium">Gross NPA Ratio</span>
+                                <span class="text-sm font-bold text-blue-600">4.1%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 41%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium">Capital Adequacy Ratio</span>
+                                <span class="text-sm font-bold text-purple-600">16.8%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 84%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium">Digital Transaction Share</span>
+                                <span class="text-sm font-bold text-orange-600">89%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-orange-600 h-2 rounded-full" style="width: 89%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t">
+                        <a href="reports/banking-performance-report.pdf" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-download mr-2"></i>
+                            Download Detailed Performance Report (Q4 2024)
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Quick Links -->
+                <div class="bg-white rounded-lg shadow p-6 mb-6 sticky top-20">
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#psb-list" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-angle-right mr-2"></i>List of PSBs
+                        </a></li>
+                        <li><a href="banking-reforms.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-angle-right mr-2"></i>Banking Reforms
+                        </a></li>
+                        <li><a href="dbu-locations.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-angle-right mr-2"></i>DBU Locations
+                        </a></li>
+                        <li><a href="priority-sector-lending.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-angle-right mr-2"></i>Priority Sector Lending
+                        </a></li>
+                        <li><a href="financial-inclusion-plans.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-angle-right mr-2"></i>Financial Inclusion Plans
+                        </a></li>
+                        <li><a href="ease-reforms.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-angle-right mr-2"></i>EASE Reforms
+                        </a></li>
+                        <li><a href="bank-board-bureau.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-angle-right mr-2"></i>Banks Board Bureau
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Important Notifications -->
+                <div class="bg-yellow-50 rounded-lg p-6 mb-6">
+                    <h3 class="text-lg font-semibold mb-4 text-yellow-900">
+                        <i class="fas fa-bell text-yellow-600 mr-2"></i>Recent Notifications
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="border-b pb-2">
+                            <a href="#" class="text-blue-600 hover:underline font-medium">
+                                Revised Guidelines for DBUs
+                            </a>
+                            <p class="text-gray-600 text-xs mt-1">March 15, 2025</p>
+                        </li>
+                        <li class="border-b pb-2">
+                            <a href="#" class="text-blue-600 hover:underline font-medium">
+                                PSB Reforms Agenda 2025
+                            </a>
+                            <p class="text-gray-600 text-xs mt-1">March 10, 2025</p>
+                        </li>
+                        <li>
+                            <a href="#" class="text-blue-600 hover:underline font-medium">
+                                Priority Sector Lending Targets
+                            </a>
+                            <p class="text-gray-600 text-xs mt-1">March 5, 2025</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Downloads -->
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-900">
+                        <i class="fas fa-download text-blue-600 mr-2"></i>Important Downloads
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                            Banking Reform Roadmap 2025
+                        </a></li>
+                        <li><a href="#" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                            DBU Guidelines
+                        </a></li>
+                        <li><a href="#" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-file-excel text-green-500 mr-2"></i>
+                            Bank Branch Statistics
+                        </a></li>
+                        <li><a href="#" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                            Priority Sector Lending Norms
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Public Sector Banks List -->
+        <section id="psb-list" class="mt-12">
+            <h2 class="text-2xl font-bold mb-6">Public Sector Banks in India</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- State Bank of India -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://static.vecteezy.com/system/resources/previews/020/336/141/non_2x/sbi-logo-sbi-icon-free-free-vector.jpg" alt="SBI Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">State Bank of India</h3>
+                        <p class="text-sm text-gray-600 mb-3">India's largest public sector bank</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 22,405</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 65,627</p>
+                        </div>
+                        <a href="https://www.sbi.co.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bank of Baroda -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://1000logos.net/wp-content/uploads/2021/06/Bank-of-Baroda-icon.png" alt="BOB Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Bank of Baroda</h3>
+                        <p class="text-sm text-gray-600 mb-3">India's international bank</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 8,214</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 12,077</p>
+                        </div>
+                        <a href="https://www.bankofbaroda.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Punjab National Bank -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/020/190/712/small_2x/punjab-national-bank-pnb-bank-logo-free-free-vector.jpg" alt="PNB Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Punjab National Bank</h3>
+                        <p class="text-sm text-gray-600 mb-3">The name you can bank upon</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 10,033</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 13,000+</p>
+                        </div>
+                        <a href="https://www.pnbindia.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Canara Bank -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5M5KM6_R-jiK1MtBQSxOt3xL36R8GYlGeg&s" alt="Canara Bank Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Canara Bank</h3>
+                        <p class="text-sm text-gray-600 mb-3">Together we can</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 9,584</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 12,882</p>
+                        </div>
+                        <a href="https://www.canarabank.com" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Union Bank of India -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5M5KM6_R-jiK1MtBQSxOt3xL36R8GYlGeg&s" alt="Union Bank Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Union Bank of India</h3>
+                        <p class="text-sm text-gray-600 mb-3">Good people to bank with</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 8,500+</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 11,000+</p>
+                        </div>
+                        <a href="https://www.unionbankofindia.co.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bank of India -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://1000logos.net/wp-content/uploads/2021/06/Bank-of-India-logo.png" alt="BOI Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Bank of India</h3>
+                        <p class="text-sm text-gray-600 mb-3">Relationship beyond banking</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 5,084</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 5,500+</p>
+                        </div>
+                        <a href="https://www.bankofindia.co.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Indian Bank -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Indian_Bank_logo.svg/1200px-Indian_Bank_logo.svg.png" alt="Indian Bank Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Indian Bank</h3>
+                        <p class="text-sm text-gray-600 mb-3">Your own bank</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 5,756</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 5,400+</p>
+                        </div>
+                        <a href="https://www.indianbank.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Central Bank of India -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn-n76CfCuDK7VpBhTPe8Y1PKclWd-9zm7LA&s" alt="Central Bank Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Central Bank of India</h3>
+                        <p class="text-sm text-gray-600 mb-3">Build a better life around us</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 4,608</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 3,600+</p>
+                        </div>
+                        <a href="https://www.centralbankofindia.co.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Indian Overseas Bank -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUe3h83C8j9PAqfRb0U0AetVbXz96asG21kQ&s" alt="IOB Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Indian Overseas Bank</h3>
+                        <p class="text-sm text-gray-600 mb-3">Good people to grow with</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 3,270</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 3,200+</p>
+                        </div>
+                        <a href="https://www.iob.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- UCO Bank -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Indian_Bank_logo.svg/1200px-Indian_Bank_logo.svg.png" alt="UCO Bank Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">UCO Bank</h3>
+                        <p class="text-sm text-gray-600 mb-3">Honours your trust</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 3,063</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 2,700+</p>
+                        </div>
+                        <a href="https://www.ucobank.com" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bank of Maharashtra -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7C8tll8WRlcBOHKv9aH9-3Gh2nAXV6i7HFA&s" alt="BOM Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Bank of Maharashtra</h3>
+                        <p class="text-sm text-gray-600 mb-3">One family one bank</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 1,897</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 1,940+</p>
+                        </div>
+                        <a href="https://www.bankofmaharashtra.in" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Punjab & Sind Bank -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/PSB_logo_23_Nov.svg/2560px-PSB_logo_23_Nov.svg.png" alt="PSB Logo" class="h-12 mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Punjab & Sind Bank</h3>
+                        <p class="text-sm text-gray-600 mb-3">Where service is a way of life</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p><i class="fas fa-code-branch mr-1"></i>Branches: 1,526</p>
+                            <p><i class="fas fa-credit-card mr-1"></i>ATMs: 1,140+</p>
+                        </div>
+                        <a href="https://www.psbindia.com" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline text-sm">
+                            Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="index.js"></script>
+    <script>
+        // Animated counter for statistics
+        function animateCounter() {
+            const counters = document.querySelectorAll('[data-count]');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                const updateCount = () => {
+                    const currentCount = +counter.innerText;
+                    
+                    if (currentCount < target) {
+                        counter.innerText = Math.ceil(currentCount + increment);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+
+                updateCount();
+            });
+        }
+
+        // Start animation when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCounter();
+        });
+    </script>
 </body>
 </html>

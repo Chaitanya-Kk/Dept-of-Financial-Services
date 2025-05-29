@@ -1,188 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Insurance - Department of Financial Services, Ministry of Finance, Government of India">
-  <title>Insurance | Department of Financial Services</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="insurance.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
-  <!-- Skip to main content -->
-  <a href="#main-content" class="sr-only focus:not-sr-only bg-blue-700 text-white p-2 focus-ring">Skip to main content</a>
+    <!-- Include header from index.html -->
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li>/</li>
+                <li class="text-gray-600">Insurance</li>
+            </ol>
+        </nav>
 
-  <!-- Header -->
-  <header class="bg-white shadow sticky">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center">
-        <img src="logo.jpg" alt="Government of India Logo" class="h-12">
-        <div class="ml-4">
-          <h1 class="text-xl font-bold text-blue-900">Department of Financial Services</h1>
-          <p class="text-sm text-gray-600">Ministry of Finance, Government of India</p>
-        </div>
-      </div>
-      <div class="flex items-center space-x-4">
-        
-        <div class="relative">
-          <input type="search" placeholder="Search..." aria-label="Search" class="border rounded p-1 pl-8 focus-ring">
-          <svg class="absolute left-2 top-2 h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </div>
-        <!-- BB-8 Toggle -->
-        <label class="bb8-toggle">
-          <input class="bb8-toggle__checkbox" type="checkbox" id="theme-toggle">
-          <div class="bb8-toggle__container">
-            <div class="bb8-toggle__scenery">
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="bb8-toggle__star"></div>
-              <div class="tatto-1"></div>
-              <div class="tatto-2"></div>
-              <div class="gomrassen"></div>
-              <div class="hermes"></div>
-              <div class="chenini"></div>
-              <div class="bb8-toggle__cloud"></div>
-              <div class="bb8-toggle__cloud"></div>
-              <div class="bb8-toggle__cloud"></div>
+        <h1 class="text-3xl font-bold mb-6">Insurance Division</h1>
+
+        <!-- Overview Section -->
+        <section class="bg-white rounded-lg shadow p-6 mb-8">
+            <p class="text-lg text-gray-700 mb-4">
+                The Insurance Division oversees the insurance sector in India, ensuring accessibility, affordability, 
+                and reliability of insurance services for all citizens. We work towards increasing insurance penetration 
+                and density in the country.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+                <div class="bg-blue-50 p-4 rounded text-center">
+                    <h3 class="text-2xl font-bold text-blue-600">5.2%</h3>
+                    <p class="text-sm text-gray-600">Insurance Penetration</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded text-center">
+                    <h3 class="text-2xl font-bold text-green-600">$91</h3>
+                    <p class="text-sm text-gray-600">Insurance Density</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded text-center">
+                    <h3 class="text-2xl font-bold text-purple-600">70</h3>
+                    <p class="text-sm text-gray-600">Insurance Companies</p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded text-center">
+                    <h3 class="text-2xl font-bold text-orange-600">2.7M</h3>
+                    <p class="text-sm text-gray-600">Insurance Agents</p>
+                </div>
             </div>
-            <div class="bb8">
-              <div class="bb8__head-container">
-                <div class="bb8__antenna"></div>
-                <div class="bb8__antenna"></div>
-                <div class="bb8__head"></div>
-              </div>
-              <div class="bb8__body"></div>
+        </section>
+
+        <!-- Insurance Types -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-6">Types of Insurance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Life Insurance -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-heart text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Life Insurance</h3>
+                        <p class="text-gray-600 mb-4">Financial protection for your family's future in case of unfortunate events.</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Term Insurance</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Endowment Plans</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>ULIPs</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Whole Life Insurance</li>
+                        </ul>
+                        <a href="insurance/life-insurance.html" class="mt-4 inline-block text-blue-600 hover:underline">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- General Insurance -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">General Insurance</h3>
+                        <p class="text-gray-600 mb-4">Protection for your assets and against various risks in daily life.</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Motor Insurance</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Home Insurance</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Travel Insurance</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Fire Insurance</li>
+                        </ul>
+                        <a href="insurance/general-insurance.html" class="mt-4 inline-block text-blue-600 hover:underline">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Health Insurance -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-heartbeat text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Health Insurance</h3>
+                        <p class="text-gray-600 mb-4">Coverage for medical expenses and healthcare needs for you and family.</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Individual Health Plans</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Family Floater Plans</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Critical Illness Cover</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Senior Citizen Plans</li>
+                        </ul>
+                        <a href="insurance/health-insurance.html" class="mt-4 inline-block text-blue-600 hover:underline">Learn More →</a>
+                    </div>
+                </div>
             </div>
-            <div class="artificial__hidden">
-              <div class="bb8__shadow"></div>
+        </section>
+
+        <!-- Government Insurance Schemes -->
+        <section class="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Government Insurance Schemes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</h3>
+                    <div class="flex justify-between mb-3">
+                        <span class="text-sm text-gray-600">Premium: ₹436/year</span>
+                        <span class="text-sm text-gray-600">Coverage: ₹2 lakh</span>
+                    </div>
+                    <p class="text-sm text-gray-700 mb-3">Life insurance coverage for death due to any reason.</p>
+                    <a href="schemes/jeevan-jyoti.html" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3">Pradhan Mantri Suraksha Bima Yojana (PMSBY)</h3>
+                    <div class="flex justify-between mb-3">
+                        <span class="text-sm text-gray-600">Premium: ₹20/year</span>
+                        <span class="text-sm text-gray-600">Coverage: ₹2 lakh</span>
+                    </div>
+                    <p class="text-sm text-gray-700 mb-3">Accident insurance coverage for death and disability.</p>
+                    <a href="schemes/suraksha-bima.html" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3">Ayushman Bharat - PMJAY</h3>
+                    <div class="flex justify-between mb-3">
+                        <span class="text-sm text-gray-600">Premium: Free</span>
+                        <span class="text-sm text-gray-600">Coverage: ₹5 lakh/family</span>
+                    </div>
+                    <p class="text-sm text-gray-700 mb-3">Health insurance for economically vulnerable families.</p>
+                    <a href="https://pmjay.gov.in" target="_blank" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3">Pradhan Mantri Fasal Bima Yojana</h3>
+                    <div class="flex justify-between mb-3">
+                        <span class="text-sm text-gray-600">Premium: 1.5-5%</span>
+                        <span class="text-sm text-gray-600">For: Farmers</span>
+                    </div>
+                    <p class="text-sm text-gray-700 mb-3">Crop insurance providing financial support to farmers.</p>
+                    <a href="https://pmfby.gov.in" target="_blank" class="text-blue-600 hover:underline">View Details</a>
+                </div>
             </div>
-          </div>
-        </label>
-      </div>
-    </div>
-    <nav class="bg-blue-900 text-white">
-      <div class="container mx-auto px-4">
-        <ul class="flex space-x-4 py-3">
-          <li><a href="index.html" class="hover:text-yellow-300 focus-ring">Who We Are</a></li>
-          <li><a href="banking.html" class="hover:text-yellow-300 focus-ring">Banking</a></li>
-          <li><a href="Insurance.html" class="text-yellow-300 focus-ring">Insurance</a></li>
-          <li><a href="Financial Inclusion.html" class="hover:text-yellow-300 focus-ring">Financial Inclusion</a></li>
-          <li><a href="Cyber Security & Fintech.html" class="hover:text-yellow-300 focus-ring">Cyber Security & Fintech</a></li>
-          <li><a href="RTI.html" class="hover:text-yellow-300 focus-ring">RTI</a></li>
-          <li><a href="signup.html" class="hover:text-yellow-300 focus-ring">Consumer Signup / Login</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+        </section>
 
-  <!-- Main Content -->
-  <main id="main-content" class="container mx-auto px-4 py-8">
-    <section class="bg-white shadow rounded-lg p-6 mb-8">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Insurance Services in India</h2>
-      <p class="text-gray-600 mb-4">
-        The Department of Financial Services oversees the insurance sector in India, promoting financial security and risk management through various insurance schemes. Our mission is to ensure accessible, affordable, and reliable insurance coverage for all citizens, supporting the vision of a financially inclusive India.
-      </p>
-      <p class="text-gray-600">
-        Explore the key insurance initiatives below, designed to cater to diverse needs, from health and life insurance to crop and property protection.
-      </p>
-    </section>
+        <!-- Insurance Companies -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-6">Insurance Companies in India</h2>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-3">Life Insurance Companies</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="https://licindia.in" target="_blank" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://brandeps.com/logo-download/L/LIC-logo-vector-01.svg" alt="LIC" class="w-10 h-10">
+                            <span>LIC of India</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQRGgGpWJpl2P3kNMo_kOKwCPj-NTb_pubng&s" alt="SBI Life" class="w-10 h-10">
+                            <span>SBI Life</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpzEkCNlpjV4d4djlKbfEdzbc00S3s6PROWQ&s" alt="HDFC Life" class="w-10 h-10">
+                            <span>HDFC Life</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxULmla3haIGtsNuDiwE2nlfRTyDC09JRKlQ&s" alt="ICICI Prudential" class="w-10 h-10">
+                            <span>ICICI Prudential</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">General Insurance Companies</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="#" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJGiUno5lcTEXxHN0wFl5Qp1s5ZNDUC6_Sg&s" alt="New India" class="w-10 h-10">
+                            <span>New India Assurance</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://aqmtechnologies.com/wp-content/uploads/2022/10/aqmlogos.png-67.png" alt="Oriental" class="w-10 h-10">
+                            <span>Oriental Insurance</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbsuM8ndNttkH2nQFOh5bL4noSuRzNgC-K1w&s" alt="National" class="w-10 h-10">
+                            <span>National Insurance</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 hover:text-blue-600">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6YPWGrNlRkxa4TKAX1IqAfOT_Ks-6kNUQyQ&s" alt="United India" class="w-10 h-10">
+                            <span>United India</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-      <div class="bg-white shadow rounded-lg p-6">
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</h3>
-        <p class="text-gray-600 mb-4">
-          A life insurance scheme offering coverage of ₹2 lakh at an affordable premium of ₹436 per annum. Available to individuals aged 18 to 50 years with a bank or post office account.
-        </p>
-        <a href="#" class="text-yellow-300 hover:underline focus-ring">Learn More</a>
-      </div>
-      <div class="bg-white shadow rounded-lg p-6">
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">Pradhan Mantri Suraksha Bima Yojana (PMSBY)</h3>
-        <p class="text-gray-600 mb-4">
-          An accident insurance scheme providing ₹2 lakh coverage for accidental death or permanent disability at a premium of ₹20 per annum. Open to individuals aged 18 to 70 years.
-        </p>
-        <a href="#" class="text-yellow-300 hover:underline focus-ring">Learn More</a>
-      </div>
-      <div class="bg-white shadow rounded-lg p-6">
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">Ayushman Bharat - PMJAY</h3>
-        <p class="text-gray-600 mb-4">
-          The world’s largest health insurance scheme, offering up to ₹5 lakh per family per year for secondary and tertiary care hospitalization to over 50 crore beneficiaries.
-        </p>
-        <a href="#" class="text-yellow-300 hover:underline focus-ring">Learn More</a>
-      </div>
-      <div class="bg-white shadow rounded-lg p-6">
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">Pradhan Mantri Fasal Bima Yojana (PMFBY)</h3>
-        <p class="text-gray-600 mb-4">
-          A crop insurance scheme to protect farmers against crop losses due to natural calamities, pests, and diseases, with premiums as low as 1.5-2% for most crops.
-        </p>
-        <a href="#" class="text-yellow-300 hover:underline focus-ring">Learn More</a>
-      </div>
-      <div class="bg-white shadow rounded-lg p-6">
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">Atal Pension Yojana (APY)</h3>
-        <p class="text-gray-600 mb-4">
-          A pension scheme ensuring a fixed pension of ₹1,000 to ₹5,000 per month for subscribers, aimed at providing financial security in old age, particularly for the unorganized sector.
-        </p>
-        <a href="#" class="text-yellow-300 hover:underline focus-ring">Learn More</a>
-      </div>
-      <div class="bg-white shadow rounded-lg p-6">
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">Insurance Regulatory and Development Authority of India (IRDAI)</h3>
-        <p class="text-gray-600 mb-4">
-          The IRDAI regulates and promotes the growth of the insurance sector, ensuring its financial stability and protecting policyholders’ interests.
-        </p>
-        <a href="#" class="text-yellow-300 hover:underline focus-ring">Learn More</a>
-      </div>
-    </section>
+        <!-- Insurance Resources -->
+        <section class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-2xl font-bold mb-6">Insurance Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6">
+                    <i class="fas fa-calculator text-3xl text-blue-600 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Premium Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-3">Calculate premium for various insurance plans</p>
+                    <a href="tools/premium-calculator.html" class="text-blue-600 hover:underline">Calculate Now →</a>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <i class="fas fa-book text-3xl text-green-600 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Insurance Guide</h3>
+                    <p class="text-sm text-gray-600 mb-3">Complete guide to understand insurance products</p>
+                    <a href="resources/insurance-guide.html" class="text-blue-600 hover:underline">Read Guide →</a>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <i class="fas fa-file-alt text-3xl text-purple-600 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Claim Process</h3>
+                    <p class="text-sm text-gray-600 mb-3">Step-by-step guide for insurance claim process</p>
+                    <a href="resources/claim-process.html" class="text-blue-600 hover:underline">Learn More →</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section class="bg-white shadow rounded-lg p-6">
-      <h2 class="text-2xl font-bold text-blue-900 mb-4">Why Insurance Matters</h2>
-      <p class="text-gray-600 mb-4">
-        Insurance is a critical tool for financial protection, helping individuals and families manage risks related to health, life, property, and agriculture. The Department of Financial Services is committed to expanding insurance penetration across India, ensuring that every citizen has access to affordable and comprehensive coverage.
-      </p>
-      <ul class="list-disc pl-5 text-gray-600">
-        <li>Protects against unforeseen financial losses.</li>
-        <li>Promotes financial stability and peace of mind.</li>
-        <li>Supports economic growth by mitigating risks.</li>
-        <li>Encourages savings and long-term financial planning.</li>
-      </ul>
-      <div class="mt-6">
-        <a href="signup.html" class="inline-block bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 focus-ring">Get Started with Insurance</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-blue-900 text-white py-8">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <h3 class="text-lg font-semibold">Contact Us</h3>
-          <p>Department of Financial Services, Ministry of Finance, Government of India</p>
-          <a href="#" class="text-yellow-300 hover:underline focus-ring">Contact Details</a>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Quick Links</h3>
-          <ul class="list-disc pl-5">
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Feedback</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Terms of Use</a></li>
-            <li><a href="#" class="text-yellow-300 hover:underline focus-ring">Website Policies</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Stats</h3>
-          <p>Total Visitors: 1,636,158</p>
-          <p>Last Updated: May 13, 2025</p>
-        </div>
-      </div>
-      <p class="text-center mt-8">Website Content Managed and Owned by Department of Financial Services</p>
-    </div>
-  </footer>
-
-  <script src="insurance.js">
-
-  </script>
+    <!-- Include footer from index.html -->
+    <script src="index.js"></script>
 </body>
 </html>

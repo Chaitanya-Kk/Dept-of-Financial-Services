@@ -1,0 +1,224 @@
+<div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="assets/logos/rbi.png" alt="RBI" class="h-16 object-contain" title="Reserve Bank of India">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="assets/logos/irdai.png" alt="IRDAI" class="h-16 object-contain" title="Insurance Regulatory and Development Authority of India">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="assets/logos/pfrda.png" alt="PFRDA" class="h-16 object-contain" title="Pension Fund Regulatory and Development Authority">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="assets/logos/nabard.png" alt="NABARD" class="h-16 object-contain" title="National Bank for Agriculture and Rural Development">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="assets/logos/npci.png" alt="NPCI" class="h-16 object-contain" title="National Payments Corporation of India">
+                </div>
+                <div class="bg-white rounded-lg p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <img src="assets/logos/nic.png" alt="NIC" class="h-16 object-contain" title="National Informatics Centre">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="index.js"></script>
+    <script>
+        // Page-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate value cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+## About Us Sub-page (about.html)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Include header from index.html -->
+    <div id="header-placeholder"></div>
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li class="text-gray-500">/</li>
+                <li><a href="who-we-are.html" class="text-blue-600 hover:underline">Who We Are</a></li>
+                <li class="text-gray-500">/</li>
+                <li class="text-gray-600">About Us</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold mb-4">About Department of Financial Services</h1>
+            <p class="text-xl">Empowering India through Financial Inclusion and Economic Progress</p>
+        </section>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2">
+                <!-- History Section -->
+                <section class="bg-white rounded-lg shadow p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6">Our History</h2>
+                    <p class="text-gray-700 mb-4">
+                        The Department of Financial Services (DFS) was established in 2008, carved out from the 
+                        Department of Economic Affairs to provide focused attention to the financial sector. This 
+                        strategic move was aimed at strengthening India's financial architecture and promoting 
+                        inclusive growth.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Since its inception, DFS has been at the forefront of transformative financial reforms, 
+                        including the world's largest financial inclusion program - Pradhan Mantri Jan Dhan Yojana, 
+                        revolutionary social security schemes, and digital payment infrastructure development.
+                    </p>
+                    <p class="text-gray-700">
+                        Our journey reflects India's commitment to ensuring that every citizen, regardless of their 
+                        economic status or geographic location, has access to formal financial services and can 
+                        participate in the nation's economic growth story.
+                    </p>
+                </section>
+
+                <!-- Mandate Section -->
+                <section class="bg-white rounded-lg shadow p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6">Our Mandate</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Policy Formulation</h3>
+                                <p class="text-gray-600">Develop and implement policies for banking, insurance, and pension sectors</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Institutional Oversight</h3>
+                                <p class="text-gray-600">Monitor and guide public sector banks, insurance companies, and financial institutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Financial Inclusion</h3>
+                                <p class="text-gray-600">Ensure universal access to banking and financial services for all citizens</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Digital Innovation</h3>
+                                <p class="text-gray-600">Promote digital banking, fintech ecosystem, and technological advancement</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Achievements -->
+                <section class="bg-white rounded-lg shadow p-8">
+                    <h2 class="text-2xl font-bold mb-6">Key Achievements</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="font-semibold text-lg mb-3">55+ Crore</h3>
+                            <p class="text-gray-700">Jan Dhan accounts opened, bringing millions into formal banking</p>
+                        </div>
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h3 class="font-semibold text-lg mb-3">₹2.8 Lakh Crore</h3>
+                            <p class="text-gray-700">Saved through Direct Benefit Transfer, eliminating leakages</p>
+                        </div>
+                        <div class="bg-purple-50 p-6 rounded-lg">
+                            <h3 class="font-semibold text-lg mb-3">75 DBUs</h3>
+                            <p class="text-gray-700">Digital Banking Units established across 75 districts</p>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h3 class="font-semibold text-lg mb-3">89%</h3>
+                            <p class="text-gray-700">Digital transactions share in total banking transactions</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Quick Facts -->
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Facts</h3>
+                    <dl class="space-y-3">
+                        <div>
+                            <dt class="font-semibold text-gray-600">Established</dt>
+                            <dd class="text-lg">2008</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold text-gray-600">Parent Ministry</dt>
+                            <dd class="text-lg">Ministry of Finance</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold text-gray-600">Headquarters</dt>
+                            <dd class="text-lg">New Delhi</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold text-gray-600">Key Sectors</dt>
+                            <dd class="text-lg">Banking, Insurance, Pension</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- Related Links -->
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Related Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="vision-mission.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-eye mr-2"></i>Vision & Mission
+                        </a></li>
+                        <li><a href="organizational-structure.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-sitemap mr-2"></i>Organization Structure
+                        </a></li>
+                        <li><a href="leadership.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-users mr-2"></i>Leadership Team
+                        </a></li>
+                        <li><a href="annual-reports.html" class="flex items-center text-blue-600 hover:underline">
+                            <i class="fas fa-file-alt mr-2"></i>Annual Reports
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
